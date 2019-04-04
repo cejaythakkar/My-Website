@@ -28,15 +28,15 @@
         var $staticHeader = document.querySelectorAll('header.static-header')[0],
             $introSlideHeader = document.querySelectorAll('.introduction-slide header')[0];
         if(this.window.scrollY === 0){
-            $staticHeader.classList.add('d-none');
-            $staticHeader.classList.remove('d-block');
-            $introSlideHeader.classList.add('d-block');
-            $introSlideHeader.classList.remove('d-none');
+            $staticHeader.classList.add('opacity-0');
+            $staticHeader.classList.remove('opacity-1');
+            $introSlideHeader.classList.add('opacity-1');
+            $introSlideHeader.classList.remove('opacity-0');
         }else{
-            $staticHeader.classList.add('d-block');
-            $staticHeader.classList.remove('d-none');
-            $introSlideHeader.classList.add('d-none');
-            $introSlideHeader.classList.remove('d-block');
+            $staticHeader.classList.add('opacity-1');
+            $staticHeader.classList.remove('opacity-0');
+            $introSlideHeader.classList.add('opacity-0');
+            $introSlideHeader.classList.remove('opacity-1');
         }
         scrollSpy(event);
     });

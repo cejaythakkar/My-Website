@@ -122,8 +122,9 @@ header nav a.navbar-brand.navigation-link {
   height: 4.2rem;
 }
 header nav a.navbar-brand.navigation-link span {
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: #f5f5f5;
+  vertical-align: middle;
 }
 header nav a.navbar-brand.navigation-link.active {
   border-bottom: 3px solid #f54;
@@ -137,12 +138,14 @@ header nav ul.navbar-nav li.nav-item.navigation-link {
 }
 header nav ul.navbar-nav li.nav-item.navigation-link a.nav-link {
   padding: 0;
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: #f5f5f5 !important;
+}
+header nav ul.navbar-nav li.nav-item.navigation-link.active {
+  border-bottom: 3px solid #f54;
 }
 header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   color: #f54 !important;
-  border-bottom: 3px solid #f54;
 }
 .content ul {
   padding: 0;
@@ -210,4 +213,57 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
 }
 .section-wrapper .section-body ul.list {
   padding: 5rem 0;
+}
+#resume-button {
+  padding: 0.5rem;
+  color: #f54;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background-color: #3e3030;
+}
+#resume-button:hover {
+  text-decoration: none;
+  color: #3e3030;
+  background-color: #f54;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.opacity-0 {
+  opacity: 0 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+  filter: alpha(opacity=0) !important;
+}
+.opacity-1 {
+  opacity: 1 !important;
+  -ms-filter: none !important;
+  filter: none !important;
+}
+.header {
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.header .logo {
+  background-image: url("/images/JT.png");
+  display: inline-block;
+  height: 3.2rem;
+  width: 3.2rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  vertical-align: middle;
+  background-position: center;
+  margin-right: 1rem;
 }

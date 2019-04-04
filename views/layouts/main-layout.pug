@@ -4,15 +4,17 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="icon",type="image/png",sizes="16x16",href="/images/favicon-16x16.png")
         title #{docTitle}
         block styles
     body
         main.main-wrapper.container-fluid
-            header.static-header.d-none
+            header.static-header.opacity-0.header
                 nav.navbar.navbar-light.navbar-expand-lg
                     div.container
                         a.navbar-brand.navigation-link(href="#home")
-                            img.d-inline-bloc.align-top(src="/docs/4.3/assets/brand/bootstrap-solid.svg" ,width="30",height="30", ,alt="")
+                            div.logo
+                            //- img.d-inline-bloc.align-top(src="/images/JT.png" ,width="30",height="30", ,alt="")
                             <span>JAY THAKKAR</span>
                         button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
                             span.navbar-toggler-icon
@@ -27,6 +29,7 @@ html(lang="en")
                                 li.nav-item.navigation-link
                                     a.nav-link(href="#connect") Connect
             block content
+            a#resume-button(href="#" download) My Resume
         block scripts
             script(src="js/jquery.min.js")
             script(src="js/bootstrap.min.js")

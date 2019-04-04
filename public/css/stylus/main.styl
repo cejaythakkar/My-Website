@@ -30,10 +30,11 @@ header
             padding:0;
             height:4.2rem;
             span
-                font-size:2.6rem;
+                font-size:2rem;
                 color:#f5f5f5;
+                vertical-align:middle;
             &.active
-                border-bottom: 3px solid #ff5544;
+                border-bottom: 3px solid #f54;
                 span
                     color: #ff5544 !important;
         height:100%;
@@ -43,12 +44,12 @@ header
                 margin-right:4rem;
                 a.nav-link
                     padding:0;  
-                    font-size:2.6rem;
+                    font-size:2rem;
                     color:#f5f5f5 !important;
                 &.active
+                    border-bottom: 3px solid #ff5544;
                     a.nav-link
                         color: #ff5544 !important;
-                        border-bottom: 3px solid #ff5544;
 .content
     ul
         padding:0;
@@ -97,3 +98,37 @@ header
     .section-body
         ul.list
             padding:5rem 0;
+
+#resume-button
+    padding:.5rem;
+    color:#ff5544;
+    position:fixed;
+    bottom:1.5rem;
+    right:1.5rem;
+    font-size:1.8rem;
+    transition:all .3s linear;
+    background-color:#3e3030;
+    &:hover
+        text-decoration:none;
+        color:#3e3030;
+        background-color:#ff5544;
+        transition:all .3s linear;
+
+
+.opacity-0{
+    opacity: 0!important;
+}   
+.opacity-1{
+    opacity:1 !important;
+}
+.header
+    transition:opacity .5s ease;
+    .logo
+        background-image: url(/images/JT.png);
+        display: inline-block;
+        height: 3.2rem;
+        width: 3.2rem;
+        background-size: cover;
+        vertical-align: middle;
+        background-position: center;
+        margin-right:1rem;
