@@ -1,0 +1,99 @@
+@import 'nib'
+@import 'about.styl'
+@import 'belief.styl'
+
+bg-color = #f5f5f5 !important
+
+html,body,.main-wrapper,.container,.content{
+    height:100%;
+}
+html,body
+    font-size:10px;
+body
+    background-color bg-color
+
+html,body,.container-fluid{
+    padding:0;
+    margin:0;
+}
+.main-wrapper
+    header.static-header
+        position:fixed;
+        width:100%;
+        z-index:7;
+        nav
+            background: #3e3030
+header
+    height:6rem;
+    nav
+        a.navbar-brand.navigation-link
+            padding:0;
+            height:4.2rem;
+            span
+                font-size:2.6rem;
+                color:#f5f5f5;
+            &.active
+                border-bottom: 3px solid #ff5544;
+                span
+                    color: #ff5544 !important;
+        height:100%;
+        ul.navbar-nav
+            li.nav-item.navigation-link
+                height:4.2rem;
+                margin-right:4rem;
+                a.nav-link
+                    padding:0;  
+                    font-size:2.6rem;
+                    color:#f5f5f5 !important;
+                &.active
+                    a.nav-link
+                        color: #ff5544 !important;
+                        border-bottom: 3px solid #ff5544;
+.content
+    ul
+        padding:0;
+        list-style:none;
+        li.introduction-slide
+            height:100%;
+            background-image:url('/images/introduction_background.jpg');
+            background-size:cover;
+            background-attachment:fixed;
+            display: flex;
+            flex-direction: column;
+            header
+                nav
+                    background-color:transparent !important;
+            .introduction-slide-content
+                height:100%
+                h1
+                    color:#ffffff;
+        li.section
+            div.section-content
+                padding-top:6rem;
+
+.bg-gray
+    gackground-color:#eee;
+
+.section-wrapper
+    padding-top:6rem;
+
+.section-wrapper
+    .section-header
+        h1
+            text-align:center;
+            color: #3e3030;
+        .line-wrapper
+            width:100%;
+            position:realtive;
+            height:.3rem;
+            .line
+                height:.3rem;
+                width:10%
+                position:absolute;
+                background:#3e3030;
+                left:50%;
+                transform:translateX(-50%);
+                background:#ff5544;
+    .section-body
+        ul.list
+            padding:5rem 0;

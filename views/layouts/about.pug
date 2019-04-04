@@ -1,0 +1,19 @@
+#about-wrapper.section-wrapper
+    .section-header
+        h1 Things that i've done so far
+        .line-wrapper
+            .line
+    .section-body
+        ul.about-list.list
+            each about in abouts
+                li.list-item
+                    div.card
+                        div.card-image(style="background-image:url('"+ about.imgUrl "')")
+                        .card-body
+                            .card-title
+                                p.title #{about.title}
+                                p.role #{about.role}
+                                p.place #{about.place}
+                            .card-description
+                                p.description #{about.description}
+

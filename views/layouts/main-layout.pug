@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{docTitle}
+        block styles
+    body
+        main.main-wrapper.container-fluid
+            header.static-header.d-none
+                nav.navbar.navbar-light.navbar-expand-lg
+                    div.container
+                        a.navbar-brand.navigation-link(href="#home")
+                            img.d-inline-bloc.align-top(src="/docs/4.3/assets/brand/bootstrap-solid.svg" ,width="30",height="30", ,alt="")
+                            <span>JAY THAKKAR</span>
+                        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
+                            span.navbar-toggler-icon
+                        .collapse.navbar-collapse.d-flex.justify-content-center#navbarNav
+                            ul.navbar-nav
+                                li.nav-item.active.navigation-link
+                                    a.nav-link(href="#about") About me
+                                li.nav-item.active.navigation-link
+                                    a.nav-link(href="#belief") My Belief 
+                                li.nav-item.navigation-link
+                                    a.nav-link(href="#passion") My Passion
+                                li.nav-item.navigation-link
+                                    a.nav-link(href="#connect") Connect
+            block content
+        block scripts
+            script(src="js/jquery.min.js")
+            script(src="js/bootstrap.min.js")
+            script(src="js/common/common.js")
+            

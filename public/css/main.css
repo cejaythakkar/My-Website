@@ -1,0 +1,213 @@
+#about-wrapper .section-body .about-list {
+  padding: 5rem 0;
+}
+#about-wrapper .section-body .about-list .list-item {
+  margin-bottom: 3.5rem;
+}
+#about-wrapper .section-body .about-list .list-item .card {
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-image {
+  height: 20rem;
+  width: 30rem;
+  background-image: url("/images/about/dummy_background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body {
+  padding: 0 0 0 3.5rem;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title {
+  margin-bottom: 1.5rem;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #605ebb;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .role {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #5ba957;
+  margin-bottom: 0.5rem;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .place {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #50555c;
+  margin-bottom: 0;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-description .description {
+  font-size: 1.5rem;
+  color: #50555c;
+}
+#beliefs-wrapper .section-body ul.beliefs-list {
+  text-align: center;
+}
+#beliefs-wrapper .section-body ul.beliefs-list li.list-item {
+  margin-bottom: 1.5rem;
+}
+#beliefs-wrapper .section-body ul.beliefs-list li.list-item a.belief {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #605ebb;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+}
+#beliefs-wrapper .section-body ul.beliefs-list li.list-item a.belief:hover,
+#beliefs-wrapper .section-body ul.beliefs-list li.list-item a.belief:active {
+  text-decoration: none;
+  color: #f45;
+  cursor: pointer;
+}
+html,
+body,
+.main-wrapper,
+.container,
+.content {
+  height: 100%;
+}
+html,
+body {
+  font-size: 10px;
+}
+body {
+  background-color: #f5f5f5 !important;
+}
+html,
+body,
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+.main-wrapper header.static-header {
+  position: fixed;
+  width: 100%;
+  z-index: 7;
+}
+.main-wrapper header.static-header nav {
+  background: #3e3030;
+}
+header {
+  height: 6rem;
+}
+header nav {
+  height: 100%;
+}
+header nav a.navbar-brand.navigation-link {
+  padding: 0;
+  height: 4.2rem;
+}
+header nav a.navbar-brand.navigation-link span {
+  font-size: 2.6rem;
+  color: #f5f5f5;
+}
+header nav a.navbar-brand.navigation-link.active {
+  border-bottom: 3px solid #f54;
+}
+header nav a.navbar-brand.navigation-link.active span {
+  color: #f54 !important;
+}
+header nav ul.navbar-nav li.nav-item.navigation-link {
+  height: 4.2rem;
+  margin-right: 4rem;
+}
+header nav ul.navbar-nav li.nav-item.navigation-link a.nav-link {
+  padding: 0;
+  font-size: 2.6rem;
+  color: #f5f5f5 !important;
+}
+header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
+  color: #f54 !important;
+  border-bottom: 3px solid #f54;
+}
+.content ul {
+  padding: 0;
+  list-style: none;
+}
+.content ul li.introduction-slide {
+  height: 100%;
+  background-image: url("/images/introduction_background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.content ul li.introduction-slide header nav {
+  background-color: transparent !important;
+}
+.content ul li.introduction-slide .introduction-slide-content {
+  height: 100%;
+}
+.content ul li.introduction-slide .introduction-slide-content h1 {
+  color: #fff;
+}
+.content ul li.section div.section-content {
+  padding-top: 6rem;
+}
+.bg-gray {
+  gackground-color: #eee;
+}
+.section-wrapper {
+  padding-top: 6rem;
+}
+.section-wrapper .section-header h1 {
+  text-align: center;
+  color: #3e3030;
+}
+.section-wrapper .section-header .line-wrapper {
+  width: 100%;
+  position: realtive;
+  height: 0.3rem;
+}
+.section-wrapper .section-header .line-wrapper .line {
+  height: 0.3rem;
+  width: 10%;
+  position: absolute;
+  background: #3e3030;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #f54;
+}
+.section-wrapper .section-body ul.list {
+  padding: 5rem 0;
+}

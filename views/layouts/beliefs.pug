@@ -1,0 +1,10 @@
+#beliefs-wrapper.section-wrapper
+    .section-header
+        h1 What I Believe
+        .line-wrapper
+            .line
+    .section-body
+        ul.beliefs-list.list
+            each belief in beliefs
+                li.list-item
+                    a.belief(href="#") #{belief.text}
