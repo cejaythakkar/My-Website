@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'fred';
+  src: url("/font/FrederickatheGreat-Regular.ttf") format('truetype');
+}
 #about-wrapper .section-body .about-list {
   padding: 5rem 0;
 }
@@ -82,6 +86,91 @@
   text-decoration: none;
   color: #f45;
   cursor: pointer;
+}
+#passion-wrapper .section-body .card-wrapper {
+  padding: 5rem 0;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card {
+  width: 33.33%;
+  height: 30rem;
+  border: none;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card:hover .passion-title-wrapper {
+  height: 6rem;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper .slider {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-transition: -webkit-transform 1s ease;
+  -moz-transition: -moz-transform 1s ease;
+  -o-transition: -o-transform 1s ease;
+  -ms-transition: -ms-transform 1s ease;
+  transition: transform 1s ease;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper .slider .slide {
+  width: 100%;
+  height: 30rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-title-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -o-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  -ms-transition: height 1s ease;
+  transition: height 1s ease;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-title-wrapper .passion-title {
+  font-size: 2.4rem;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  height: 6rem;
+  line-height: 1;
 }
 html,
 body,

@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const pathUtil = require('../util/path');
 const adminData = require('./demos/shoping-cart/admin');
+const fs = require('fs');
 router.get('/',(request,response,next)=> {
     // response.sendFile(path.join(pathUtil.getRootDirname(),'views','demos','shoping-cart','shop.html'));
     var abouts = [
@@ -69,7 +70,17 @@ router.get('/',(request,response,next)=> {
             text : "sit back have `chai` and hangout with friends"
         }
     ];
-    response.render('main',{products:adminData.products,docTitle:"My Shop",abouts:abouts,beliefs:beliefs});
+    var passionImages = {};
+    const passionFolders = fs.readdirSync(path.join(pathUtil.getRootDirname(),'public','images','passion'));
+    for(folder in passionFolders){
+        var folder = folder;
+        passionImages[passionFolders[folder]] = [];
+        var listOfImages = fs.readdirSync(path.join(pathUtil.getRootDirname(),'public','images','passion',passionFolders[folder]));
+        for(image in listOfImages){
+            passionImages[passionFolders[folder]].push('/images/passion/'+ passionFolders[folder] +'/'+listOfImages[image]);
+        }
+    }
+    response.render('main',{products:adminData.products,docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages});
 });
 
 module.exports = router;
