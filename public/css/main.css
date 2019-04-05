@@ -23,10 +23,15 @@
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-image {
   height: 20rem;
-  width: 30rem;
   background-image: url("/images/about/dummy_background.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;

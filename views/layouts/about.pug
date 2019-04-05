@@ -8,9 +8,9 @@
             each about in abouts
                 li.list-item
                     div.card
-                        div.card-image(style="background-image:url('"+ about.imgUrl "')")
-                        .card-body
-                            .card-title
+                        div.card-image.col-12.col-sm-12(style="background-image:url('"+ about.imgUrl "')")
+                        .card-body.p-0.p-sm-0
+                            .card-title.mt-3.mt-sm-3
                                 p.title #{about.title}
                                 p.role #{about.role}
                                 p.place #{about.place}
