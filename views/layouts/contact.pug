@@ -1,0 +1,25 @@
+#contact-wrapper.section-wrapper
+    .section-header
+        h1 Connect
+        .line-wrapper
+            .line
+    .section-body
+        .section-body-wrapper
+            .contact-list-text-wrapper
+                h5.contact-list-text Got a Question?
+                h5.contact-list-text Got an Idea?
+                h5.contact-list-text Want to Hire Me?
+                h5.contact-list-text Want to Join My Campaigns?
+                h5.contact-list-text Or Just wanna Say 'HELLO'?
+                h5.contact-list-text Whatever the reason, you can reach me through the platforms below
+            .contact-list-wrapper
+                ul.contact-list.row
+                    each contact in contacts
+                        li.list-item.row.col-lg-4
+                            .img-container(style="background-image:url('"+ contact.imageUrl +"')")
+                            .social-info-container
+                                .title
+                                    span #{contact.title}
+                                .value
+                                    span #{contact.value}
+

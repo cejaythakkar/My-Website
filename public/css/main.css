@@ -106,14 +106,18 @@
   height: 30rem;
   border: none;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card:hover .passion-title-wrapper {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper {
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  position: relative;
+}
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper:hover .passion-title-wrapper {
   height: 6rem;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-slider-wrapper {
   height: 100%;
   overflow: hidden;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper .slider {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-slider-wrapper .slider {
   height: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -127,7 +131,7 @@
   -ms-transition: -ms-transform 1s ease;
   transition: transform 1s ease;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card .passion-slider-wrapper .slider .slide {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-slider-wrapper .slider .slide {
   width: 100%;
   height: 30rem;
   -webkit-background-size: cover;
@@ -143,7 +147,7 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card .passion-title-wrapper {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-title-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -167,7 +171,7 @@
   -ms-transition: height 1s ease;
   transition: height 1s ease;
 }
-#passion-wrapper .section-body .card-wrapper .passion-card .passion-title-wrapper .passion-title {
+#passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-title-wrapper .passion-title {
   font-size: 2.4rem;
   display: block;
   color: #fff;
@@ -176,6 +180,65 @@
   padding: 1.5rem;
   height: 6rem;
   line-height: 1;
+}
+#contact-wrapper.section-wrapper .section-body {
+  padding: 5rem 0;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-text-wrapper .contact-list-text {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-text-wrapper .contact-list-text:last-child {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 2.5rem;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .img-container {
+  height: 10rem;
+  width: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container .title span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container .value span {
+  font-size: 1.5rem;
+}
+#footer .footer-container {
+  padding: 2.5rem 0;
+  background-color: #f54;
+}
+#footer .footer-container p {
+  margin: 0;
+  text-align: center;
+  color: #3e3030;
+  font-size: 1.6rem;
 }
 html,
 body,
@@ -286,6 +349,7 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
 .section-wrapper .section-header h1 {
   text-align: center;
   color: #3e3030;
+  margin-bottom: 1rem;
 }
 .section-wrapper .section-header .line-wrapper {
   width: 100%;

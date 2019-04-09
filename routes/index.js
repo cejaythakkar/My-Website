@@ -70,6 +70,48 @@ router.get('/',(request,response,next)=> {
             text : "sit back have `chai` and hangout with friends"
         }
     ];
+    var contacts = [
+        {
+            imageUrl:'/images/icons/contact/telephone_64.png',
+            title:'Contact Number',
+            value:'+91-9978821813'
+        },
+        {
+            imageUrl:'/images/icons/contact/gmail_64.png',
+            title:'E-Mail',
+            value:'ce.jaythakkar@gmail.com'
+        },
+        {
+            imageUrl:'/images/icons/contact/linkedin_64.png',
+            title:'LinkedIn',
+            value:'linkedin profile link'
+        },
+        {
+            imageUrl:'/images/icons/contact/skype_64.png',
+            title:'Skype',
+            value:'skype id'
+        },
+        {
+            imageUrl:'/images/icons/contact/whatsapp_64.png',
+            title:'Whatsapp',
+            value:'+91-9978821813'
+        },
+        {
+            imageUrl:'/images/icons/contact/twitter_64.png',
+            title:'Twitter',
+            value:'Twitter profile url'
+        },
+        {
+            imageUrl:'/images/icons/contact/facebook_64.png',
+            title:'Facebook',
+            value:'Facebook profile url'
+        },
+        {
+            imageUrl:'/images/icons/contact/instagram_64.png',
+            title:'Instagram',
+            value:'Instagram profile url'
+        }
+    ]
     var passionImages = {};
     const passionFolders = fs.readdirSync(path.join(pathUtil.getRootDirname(),'public','images','passion'));
     for(folder in passionFolders){
@@ -80,7 +122,7 @@ router.get('/',(request,response,next)=> {
             passionImages[passionFolders[folder]].push('/images/passion/'+ passionFolders[folder] +'/'+listOfImages[image]);
         }
     }
-    response.render('main',{products:adminData.products,docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages});
+    response.render('main',{products:adminData.products,docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages,contacts:contacts});
 });
 
 module.exports = router;
