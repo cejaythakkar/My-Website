@@ -130,10 +130,6 @@ header
     opacity:1 !important;
 }
 .header
-    &.static-header
-        .d-lg-none
-            button.navbar-toggler
-                background-color:#F54;
     transition:opacity .5s ease;
     .logo
         background-image: url(/images/JT.png);
@@ -158,6 +154,39 @@ header
                 &.active
                     display:block;
 
+button.navbar-toggler
+    background-color:transparent;
+    position:fixed;
+    top:1rem;
+    left:1rem;
+    font-size:2.5rem
+    color:#f54
+    z-index:10
 
+#drawer
+    position: fixed;
+    z-index: 9;
+    height: auto;
+    width: 100%;
+    background-color:#3e3030
+    transition:top .8s ease-in-out
+    &.closed
+        top:-100%
+    &.opened
+        top:0
+    &.closed,&.opened
+        transition:top .8s ease-in-out
+    ul.navbar-nav
+        padding:3rem 0;
+        li.nav-item
+            &.active
+                border-bottom:3px solid #f54
+                a
+                    color:#f54
+            a
+                font-size:2rem
+                cursor:pointer
+                color:#fff
 
+    
 @import 'media.styl'

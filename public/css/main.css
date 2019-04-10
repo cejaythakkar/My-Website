@@ -424,9 +424,6 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   -ms-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-.header.static-header .d-lg-none button.navbar-toggler {
-  background-color: #f54;
-}
 .header .logo {
   background-image: url("/images/JT.png");
   display: inline-block;
@@ -452,6 +449,55 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
 }
 .header .d-lg-none .navbar-nav.flex-column.align-items-center .nav-item.navigation-link.active {
   display: block;
+}
+button.navbar-toggler {
+  background-color: transparent;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2.5rem;
+  color: #f54;
+  z-index: 10;
+}
+#drawer {
+  position: fixed;
+  z-index: 9;
+  height: auto;
+  width: 100%;
+  background-color: #3e3030;
+  -webkit-transition: top 0.8s ease-in-out;
+  -moz-transition: top 0.8s ease-in-out;
+  -o-transition: top 0.8s ease-in-out;
+  -ms-transition: top 0.8s ease-in-out;
+  transition: top 0.8s ease-in-out;
+}
+#drawer.closed {
+  top: -100%;
+}
+#drawer.opened {
+  top: 0;
+}
+#drawer.closed,
+#drawer.opened {
+  -webkit-transition: top 0.8s ease-in-out;
+  -moz-transition: top 0.8s ease-in-out;
+  -o-transition: top 0.8s ease-in-out;
+  -ms-transition: top 0.8s ease-in-out;
+  transition: top 0.8s ease-in-out;
+}
+#drawer ul.navbar-nav {
+  padding: 3rem 0;
+}
+#drawer ul.navbar-nav li.nav-item.active {
+  border-bottom: 3px solid #f54;
+}
+#drawer ul.navbar-nav li.nav-item.active a {
+  color: #f54;
+}
+#drawer ul.navbar-nav li.nav-item a {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
 }
 @media (max-width: 992px) {
   #about-wrapper .section-body .about-list .list-item .card .card-image {
