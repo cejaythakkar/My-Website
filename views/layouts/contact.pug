@@ -15,9 +15,9 @@
             .contact-list-wrapper
                 ul.contact-list.row
                     each contact in contacts
-                        li.list-item.row.col-lg-4
-                            .img-container(style="background-image:url('"+ contact.imageUrl +"')")
-                            .social-info-container
+                        li.list-item.row.col-lg-4.col-sm-6
+                            .img-container.col-sm-4.col-2(style="background-image:url('"+ contact.imageUrl +"')")
+                            .social-info-container.col-sm-8.col-10
                                 .title
                                     span #{contact.title}
                                 .value

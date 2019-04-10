@@ -16,6 +16,7 @@
                     navElems.forEach(function(elem){
                         if(id==="home"){
                             elem.classList.add('active');
+                            elem.parentElement.classList.add('active')
                         }
                         else{
                             elem.parentElement.classList.add('active')

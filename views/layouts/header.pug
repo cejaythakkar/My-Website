@@ -1,18 +1,33 @@
-header.header
-    nav.navbar.navbar-light.bg-light.navbar-expand-lg
-        div.container
-            a.navbar-brand.navigation-link(href="#home")
-                div.logo
-                <span>JAY THAKKAR</span>
-            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
-                span.navbar-toggler-icon
-            .collapse.navbar-collapse.d-flex.justify-content-center#navbarNav
-                ul.navbar-nav
-                    li.nav-item.navigation-link
-                        a.nav-link(href="#about") About me 
-                    li.nav-item.navigation-link
-                        a.nav-link(href="#belief") My Belief
-                    li.nav-item.navigation-link
-                        a.nav-link(href="#passion") My Passion
-                    li.nav-item.navigation-link
-                        a.nav-link(href="#connect") Connect
+nav.navbar.navbar-light.d-none.d-lg-block
+    div.container.d-flex.flex-column
+        a.navbar-brand.navigation-link(href="#home")
+            div.logo
+            <span>JAY THAKKAR</span>
+        .collapse.navbar-collapse.d-flex.justify-content-center#navbarNav
+            ul.navbar-nav.flex-row.justify-content-center
+                li.nav-item.navigation-link
+                    a.nav-link(href="#about") About me 
+                li.nav-item.navigation-link
+                    a.nav-link(href="#belief") My Belief
+                li.nav-item.navigation-link
+                    a.nav-link(href="#passion") My Passion
+                li.nav-item.navigation-link
+                    a.nav-link(href="#connect") Connect
+nav.navbar.navbar-light.d-lg-none
+    div.container.d-flex.flex-column
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse.d-flex.justify-content-center.h-100#navbarNav
+            ul.navbar-nav.h-100.flex-column.align-items-center
+                li.nav-item.navigation-link
+                    a.nav-link.navbar-brand.navigation-link(href="#home")
+                        div.logo
+                        <span>JAY THAKKAR</span>
+                li.nav-item.navigation-link
+                    a.nav-link(href="#about") About me 
+                li.nav-item.navigation-link
+                    a.nav-link(href="#belief") My Belief
+                li.nav-item.navigation-link
+                    a.nav-link(href="#passion") My Passion
+                li.nav-item.navigation-link
+                    a.nav-link(href="#connect") Connect

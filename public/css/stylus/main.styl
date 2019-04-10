@@ -130,6 +130,10 @@ header
     opacity:1 !important;
 }
 .header
+    &.static-header
+        .d-lg-none
+            button.navbar-toggler
+                background-color:#F54;
     transition:opacity .5s ease;
     .logo
         background-image: url(/images/JT.png);
@@ -140,5 +144,20 @@ header
         vertical-align: middle;
         background-position: center;
         margin-right:1rem;
+    .d-lg-none
+        button.navbar-toggler
+            position:absolute;
+            background-color:#3e3030;
+            top:1rem;
+            left:1rem;
+            height:3.5rem;
+        .navbar-nav.flex-column.align-items-center
+            .nav-item.navigation-link
+                display:none;
+                margin:0;   
+                &.active
+                    display:block;
 
-@import 'media.styl';
+
+
+@import 'media.styl'

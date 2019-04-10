@@ -10,25 +10,9 @@ html(lang="en")
     body
         main.main-wrapper.container-fluid
             header.static-header.opacity-0.header
-                nav.navbar.navbar-light.navbar-expand-lg
-                    div.container
-                        a.navbar-brand.navigation-link(href="#home")
-                            div.logo
-                            //- img.d-inline-bloc.align-top(src="/images/JT.png" ,width="30",height="30", ,alt="")
-                            <span>JAY THAKKAR</span>
-                        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
-                            span.navbar-toggler-icon
-                        .collapse.navbar-collapse.d-flex.justify-content-center#navbarNav
-                            ul.navbar-nav
-                                li.nav-item.active.navigation-link
-                                    a.nav-link(href="#about") About me
-                                li.nav-item.active.navigation-link
-                                    a.nav-link(href="#belief") My Belief 
-                                li.nav-item.navigation-link
-                                    a.nav-link(href="#passion") My Passion
-                                li.nav-item.navigation-link
-                                    a.nav-link(href="#connect") Connect
+                include header.pug
             block content
+            include drawer.pug
             a#resume-button(href="#" download) My Resume
         block scripts
             script(src="js/jquery.min.js")

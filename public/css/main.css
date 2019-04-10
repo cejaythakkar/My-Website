@@ -94,17 +94,18 @@
 }
 #passion-wrapper .section-body .card-wrapper {
   padding: 5rem 0;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 #passion-wrapper .section-body .card-wrapper .passion-card {
   width: 33.33%;
   height: 30rem;
   border: none;
+  overflow: hidden;
 }
 #passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper {
   margin: 0.2rem 0.2rem 0.2rem 0;
@@ -196,6 +197,16 @@
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper {
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item:nth-child(1) .img-container {
+  -webkit-background-size: 4rem;
+  -moz-background-size: 4rem;
+  background-size: 4rem;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item:nth-child(2) .img-container {
+  -webkit-background-size: 4.8rem;
+  -moz-background-size: 4.8rem;
+  background-size: 4.8rem;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .img-container {
   height: 10rem;
@@ -413,6 +424,9 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   -ms-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
+.header.static-header .d-lg-none button.navbar-toggler {
+  background-color: #f54;
+}
 .header .logo {
   background-image: url("/images/JT.png");
   display: inline-block;
@@ -424,4 +438,23 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   vertical-align: middle;
   background-position: center;
   margin-right: 1rem;
+}
+.header .d-lg-none button.navbar-toggler {
+  position: absolute;
+  background-color: #3e3030;
+  top: 1rem;
+  left: 1rem;
+  height: 3.5rem;
+}
+.header .d-lg-none .navbar-nav.flex-column.align-items-center .nav-item.navigation-link {
+  display: none;
+  margin: 0;
+}
+.header .d-lg-none .navbar-nav.flex-column.align-items-center .nav-item.navigation-link.active {
+  display: block;
+}
+@media (max-width: 992px) {
+  #about-wrapper .section-body .about-list .list-item .card .card-image {
+    height: 30rem;
+  }
 }
