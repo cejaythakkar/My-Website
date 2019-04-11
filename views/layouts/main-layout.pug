@@ -13,11 +13,9 @@ html(lang="en")
                 include header.pug
             block content
             include drawer.pug
-            button.navbar-toggler.fa.fa-bars(type="button")
+            button.navbar-toggler.fa.fa-bars.d-lg-none.closed(type="button")
             span.navbar-toggler-icon
-            a#resume-button(href="#" download) My Resume
         block scripts
             script(src="js/jquery.min.js")
             script(src="js/bootstrap.min.js")
             script(src="js/common/common.js")
-            

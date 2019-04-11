@@ -42,7 +42,7 @@
     });
     document.addEventListener('click',function(event){
         $toggle = $('.navbar-toggler')[0];
-        if($toggle.classList.contains('closed'))
+        if($toggle.classList.contains('fa-bars'))
             return
         $toggle.dispatchEvent(new Event('click'));
     });

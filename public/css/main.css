@@ -1,6 +1,38 @@
 @font-face {
   font-family: 'fred';
-  src: url("/font/FrederickatheGreat-Regular.ttf") format('truetype');
+  src: url("/fonts/FrederickatheGreat-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'amatic-bold';
+  src: url("/fonts/AmaticSC-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'amatic-regular';
+  src: url("/fonts/AmaticSC-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-bold';
+  src: url("/fonts/CrimsonText-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-bold-italic';
+  src: url("/fonts/CrimsonText-BoldItalic.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-italic';
+  src: url("/fonts/CrimsonText-Italic.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-regular';
+  src: url("/fonts/CrimsonText-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-semibold';
+  src: url("/fonts/CrimsonText-SemiBold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'crimson-semibold-italic';
+  src: url("/fonts/CrimsonText-SemiBoldItalic.ttf") format('truetype');
 }
 #about-wrapper .section-body .about-list {
   padding: 5rem 0;
@@ -50,36 +82,44 @@
   flex: 1;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-body .card-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .title,
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .role,
+#about-wrapper .section-body .about-list .list-item .card .card-body .card-title .place {
+  margin-bottom: 0;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-body .card-title .title {
   font-size: 2.4rem;
   font-weight: bold;
   color: #605ebb;
+  font-family: crimson-bold;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-body .card-title .role {
   font-size: 1.6rem;
   font-weight: bold;
   color: #5ba957;
-  margin-bottom: 0.5rem;
+  font-family: crimson-semibold;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-body .card-title .place {
   font-size: 1.5rem;
   font-weight: bold;
   color: #50555c;
-  margin-bottom: 0;
+  font-family: crimson-semibold-italic;
 }
 #about-wrapper .section-body .about-list .list-item .card .card-body .card-description .description {
   font-size: 1.5rem;
   color: #50555c;
+  font-family: crimson-regular;
 }
 #beliefs-wrapper .section-body ul.beliefs-list {
   text-align: center;
 }
 #beliefs-wrapper .section-body ul.beliefs-list li.list-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 #beliefs-wrapper .section-body ul.beliefs-list li.list-item a.belief {
+  font-family: crimson-bold;
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -173,7 +213,7 @@
   transition: height 1s ease;
 }
 #passion-wrapper .section-body .card-wrapper .passion-card .passion-card-wrapper .passion-title-wrapper .passion-title {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   display: block;
   color: #fff;
   width: 100%;
@@ -181,18 +221,21 @@
   padding: 1.5rem;
   height: 6rem;
   line-height: 1;
+  font-family: fred;
 }
 #contact-wrapper.section-wrapper .section-body {
   padding: 5rem 0;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-text-wrapper .contact-list-text {
-  font-size: 1.8rem;
+  font-family: crimson-regular;
+  font-size: 2rem;
   font-weight: normal;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-text-wrapper .contact-list-text:last-child {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-top: 2.5rem;
+  font-family: crimson-bold;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper {
   margin-top: 4rem;
@@ -213,6 +256,11 @@
   width: 10rem;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
+}
+#contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .img-container img {
+  max-height: 100%;
+  max-width: 100%;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container {
   display: -webkit-box;
@@ -235,11 +283,12 @@
   justify-content: center;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container .title span {
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: crimson-bold;
 }
 #contact-wrapper.section-wrapper .section-body .section-body-wrapper .contact-list-wrapper ul.contact-list li.list-item .social-info-container .value span {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: crimson-regular;
 }
 #footer .footer-container {
   padding: 2.5rem 0;
@@ -249,7 +298,8 @@
   margin: 0;
   text-align: center;
   color: #3e3030;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: crimson-bold;
 }
 html,
 body,
@@ -285,6 +335,22 @@ header {
 header nav {
   height: 100%;
 }
+header nav.d-lg-none .container {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center !important;
+  align-items: center !important;
+}
+header nav .container {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start !important;
+  align-items: flex-start !important;
+}
 header nav a.navbar-brand.navigation-link {
   padding: 0;
   height: 4.2rem;
@@ -293,6 +359,7 @@ header nav a.navbar-brand.navigation-link span {
   font-size: 2rem;
   color: #f5f5f5;
   vertical-align: middle;
+  font-family: fred;
 }
 header nav a.navbar-brand.navigation-link.active {
   border-bottom: 3px solid #f54;
@@ -308,6 +375,7 @@ header nav ul.navbar-nav li.nav-item.navigation-link a.nav-link {
   padding: 0;
   font-size: 2rem;
   color: #f5f5f5 !important;
+  font-family: fred;
 }
 header nav ul.navbar-nav li.nav-item.navigation-link.active {
   border-bottom: 3px solid #f54;
@@ -339,14 +407,40 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.content ul li.introduction-slide .intro-content-wrapper {
+  background-color: rgba(0,0,0,0.5);
+}
 .content ul li.introduction-slide header nav {
   background-color: transparent !important;
 }
 .content ul li.introduction-slide .introduction-slide-content {
   height: 100%;
 }
-.content ul li.introduction-slide .introduction-slide-content h1 {
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h1,
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h5,
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h4.brief-intro {
   color: #fff;
+}
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h5 {
+  font-family: amatic-regular;
+  font-size: 3.5rem;
+  font-style: italic;
+}
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h1 {
+  font-family: fred;
+  font-size: 5rem;
+}
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper h3.subtitle {
+  font-family: fred;
+  font-size: 2.4rem;
+  color: #f54;
+}
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper div.brief-intro-wrapper {
+  margin-top: 6rem;
+}
+.content ul li.introduction-slide .introduction-slide-content .intro-wrapper div.brief-intro-wrapper h4.brief-intro {
+  font-family: crimson-semibold;
+  font-size: 2rem;
 }
 .content ul li.section div.section-content {
   padding-top: 6rem;
@@ -361,6 +455,7 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
   text-align: center;
   color: #3e3030;
   margin-bottom: 1rem;
+  font-family: fred;
 }
 .section-wrapper .section-header .line-wrapper {
   width: 100%;
@@ -385,27 +480,47 @@ header nav ul.navbar-nav li.nav-item.navigation-link.active a.nav-link {
 }
 #resume-button {
   padding: 0.5rem;
-  color: #f54;
-  position: fixed;
+  color: #fff;
   bottom: 1.5rem;
   right: 1.5rem;
-  font-size: 1.8rem;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  background-color: #3e3030;
+  font-size: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 20rem;
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: crimson-semibold;
 }
 #resume-button:hover {
   text-decoration: none;
-  color: #3e3030;
-  background-color: #f54;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  background: #f54 -webkit-radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+  background: #f54 -moz-radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+  background: #f54 -o-radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+  background: #f54 -ms-radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+  background: #f54 radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #f54;
+}
+#resume-button:active {
+  background-color: #fbaea7;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  border: 1px solid #fbaea7;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -ms-transition: all 0s;
+  transition: all 0s;
 }
 .opacity-0 {
   opacity: 0 !important;
@@ -487,6 +602,7 @@ button.navbar-toggler {
 }
 #drawer ul.navbar-nav {
   padding: 3rem 0;
+  overflow: hidden;
 }
 #drawer ul.navbar-nav li.nav-item.active {
   border-bottom: 3px solid #f54;
@@ -498,6 +614,7 @@ button.navbar-toggler {
   font-size: 2rem;
   cursor: pointer;
   color: #fff;
+  font-family: fred;
 }
 @media (max-width: 992px) {
   #about-wrapper .section-body .about-list .list-item .card .card-image {

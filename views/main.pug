@@ -9,10 +9,19 @@ block content
     div.content
         ul.d-block.h-100
             li.introduction-slide.section#home
-                header.header
-                    include layouts/header.pug
-                .introduction-slide-content.d-flex.align-items-center.justify-content-center
-                    h1 hi, i'am JAY THAKKAR
+                .intro-content-wrapper.h-100
+                    header.header
+                        include layouts/header.pug
+                    .introduction-slide-content.d-flex.align-items-center.justify-content-center
+                        .intro-wrapper.w-100.text-center
+                            .container
+                                h5 Hey, I'm 
+                                h1 JAY THAKKAR
+                                div.subtitle-wrapper.w-100.text-center
+                                    h3.subtitle.d-inline-block Front-End Develper + Full-Stack Developer(Node.js)
+                                div.brief-intro-wrapper.w-100.text-center
+                                    h4.brief-intro.d-inline-block A UI Developer,Full-Stack Developer(Node.js) from India with a focus in user experience, Visual and Interaction design. Apart from a Developer, i'm also an Avid Cyclist, a Sports Activist and an Artist. 
+                                a#resume-button.closed(href="/images/JayMThakkar.docx" download="resume-jaythakkar.docx") Resume
             li.section.bg-gray#about
                 div.container
                     div.section-content
