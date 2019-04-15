@@ -9,10 +9,10 @@ router.get('/',(request,response,next)=> {
     var abouts = [
         {
             imgUrl:'/images/about/dummy_background.jpg',
-            title:'Google Cloud',
-            role:'Front-End Software Engineer (Lead), Since Fall 2015',
-            place:'New York, NY',
-            description:'My team works on building amazing user experiences for Google Cloud users. I helped carry out the top-to-bottom redesign and implementation of Cloud Datastore\'s UI, and currently lead the front-end team of Google\'s Cloud SQL product. March 2017, we launched our PostgreSQL offering – which increased Cloud SQL\'s total addressable market by ~40%.'
+            title:'R.J Tibrewal College of Computer Application',
+            role:'Bachelors of Computer Application, class of 2008',
+            place:'Ahmedabad, Gujarat',
+            description:`I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.`
         },
         {
             imgUrl:'/images/about/dummy_background.jpg',

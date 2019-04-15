@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client-install":"npm install --prefix react-client",
+    "client-install": "npm install --prefix react-client",
     "start": "node main.js",
-    "server":"nodemon main.js",
+    "server": "nodemon main.js",
     "heroku-postbuild": "cd react-client && npm install && npm run build"
   },
   "author": "jay thakkar",
@@ -17,6 +17,7 @@
     "bootstrap": "^4.3.1",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "mongodb": "^3.2.3",
     "nib": "^1.1.2",
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
