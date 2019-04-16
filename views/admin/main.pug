@@ -1,8 +1,30 @@
 extends layout/main-layout.pug
 
 block title
-    title Home Config
+    title Home Screen Config
 
 block body-content
-    main.content-wrapper
-        h1 this is the home page config screen of the website
+    main.content-body-wrapper
+        h1 Home Page Configuration
+        .config-form-wrapper
+            form.config-form(action="/admin/home",method="POST")
+                div.form-control
+                    label(for="greeting") Greetings 
+                    input(type="text",name="greeting",value=data && data.greetings)
+                div.form-control
+                    label(for="role") Role
+                    input(type="text",name="role",value=data && data.role)
+                div.form-control
+                    label(for="introduction") Introduction
+                    textarea(name="introduction", cols="30", rows="10") #{data && data.intro}
+                .form-control
+                    if(data!==null)
+                        button(type="submit") Update
+                    else
+                        button(type="submit") Add
+            .image-slider-wrapper
+                .image-slider-header
+                .image-slider-body
+                    form.img-uploader-form(enctype="multipart/form-data",id="img-upload-form",action="/admin/home/img",method="POST")
+                        input(type="file",multiple,name="img-uploader")
+                        button(type="submit") add pictures
