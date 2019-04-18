@@ -9,25 +9,25 @@ class HomePageDetails{
     }
 
     save(callback){
-        getDb().collection('home').insertOne(this).then(result => callback()).catch(() => console.log(err));
+        db.collection('home').insertOne(this).then(result => callback()).catch(() => console.log(err));
     }
 
     static getHomePageDetails(callback){
+        const db = getDb(); 
         let data = {};
-        getDb().collection('home').findOne({
+        db.collection('home').findOne({
             id:'detail101'
         }).then((result) => {
             data.homeDetails = result;
-            return getDb().collection('home-screen-images').find()
-        }).
-        then((result) => {
-            data.sliderImages = result;
-            callback(data);
-        });
+            db.collection('home-screen-images').find().toArray().then(result => {
+                data.images = result;
+                callback(data);
+            }).catch(err => console.log(err))
+        })
     }
 
     static updateHomePageDetails(data,callback){
-        getDb().collection('home').updateOne({id:'detail101'},{$set:data}).then(data => callback());
+        db.collection('home').updateOne({id:'detail101'},{$set:data}).then(data => callback());
     }
 }  
 

@@ -2,12 +2,15 @@ extends layout/main-layout.pug
 
 block title
     title Home Screen Config
+block css
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
 
 block body-content
-    main.content-body-wrapper
+    section.content-body-wrapper
         h1 Home Page Configuration
         .config-form-wrapper
-            form.config-form(action="/admin/home",method="POST")
+            form.config-form.form-group(action="/admin/home",method="POST")
                 div.form-control
                     label(for="greeting") Greetings 
                     input(type="text",name="greeting",value=data && data.greetings)
@@ -25,6 +28,27 @@ block body-content
             .image-slider-wrapper
                 .image-slider-header
                 .image-slider-body
-                    form.img-uploader-form(enctype="multipart/form-data",id="img-upload-form",action="/admin/home/img",method="POST")
+                    //- form.img-uploader-form(enctype="multipart/form-data",id="img-upload-form",action="/admin/home/img",method="POST")
+                    //-     input(type="file",multiple,name="img-uploader")
+                    //-     button(type="submit") add pictures
+                    form.img-uploader-form(submit="")
                         input(type="file",multiple,name="img-uploader")
                         button(type="submit") add pictures
+                    #file-list-to-upload
+
+                    .image-slider-container
+                        ul.home-page-image-list
+                            each image in data.images
+                                li.list-item.row
+                                    div.image-container
+                                        img(src=image.imageUrl, alt="",onerror="this.src='images/no-image.png'")
+                                    .description-container.d-flex.flex-grow-1.align-items-center.justify-content-center
+                                        span #{image.short_description}
+                                    .delete-button-container.d-flex.align-items-center
+                                        a(href="#")
+                                            i.fa.fa-trash-o
+
+block scripts
+    script(src="/templates/home/imageListing.js")
+    script(src="/templates/home/filesToUploadList.js")
+    script(src="/js/admin/home/home.js")

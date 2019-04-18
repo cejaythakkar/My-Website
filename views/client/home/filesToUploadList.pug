@@ -1,0 +1,10 @@
+ul.home-page-image-list
+    each image in images
+        li.list-item.row
+            div.image-name-container
+                span #{image.name}
+            .description-container.d-flex.flex-grow-1.align-items-center.justify-content-center
+                textarea(name="", cols="30", rows="10",data-filename=image.name)
+            .delete-button-container.d-flex.align-items-center
+                a(href="#",data-filename=image.name)
+                    i.fa.fa-trash-o

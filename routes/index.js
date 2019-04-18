@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const router = express.Router();
 const pathUtil = require('../util/path');
-const adminData = require('./demos/shoping-cart/admin');
 const fs = require('fs');
 router.get('/',(request,response,next)=> {
     // response.sendFile(path.join(pathUtil.getRootDirname(),'views','demos','shoping-cart','shop.html'));
@@ -122,7 +121,7 @@ router.get('/',(request,response,next)=> {
             passionImages[passionFolders[folder]].push('/images/passion/'+ passionFolders[folder] +'/'+listOfImages[image]);
         }
     }
-    response.render('main',{products:adminData.products,docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages,contacts:contacts});
+    response.render('main',{docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages,contacts:contacts});
 });
 
 module.exports = router;

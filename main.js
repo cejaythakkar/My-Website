@@ -46,7 +46,7 @@ const filefilter = (request , file , callback) => {
             callback(null,false);
     }
 }
-app.use(multer({storage:storage,fileFilter:filefilter}).array('img-uploader'));
+app.use(multer({storage:storage,fileFilter:filefilter}).any());
 app.use(express.static(path.join(pathUtil.getRootDirname(),'public')));
 app.use(express.static(path.join(pathUtil.getRootDirname(),'node_modules','bootstrap','dist')));
 
