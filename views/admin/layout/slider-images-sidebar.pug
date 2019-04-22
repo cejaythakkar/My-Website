@@ -1,0 +1,15 @@
+.page-sidebar-header
+    h1#page-sidebar-header-title Home Images
+    a.add-button(href="#")
+        i.fa.fa-plus 
+.image-slider-container
+    ul.home-page-image-list
+        each image in data.images
+            li.list-item.row
+                div.image-container
+                    img(src=image.imageUrl, alt="",onerror="this.src='images/no-image.png'")
+                    .description-container.d-flex.flex-grow-1.align-items-center.justify-content-center
+                        span #{image.short_description}
+                        .delete-button-container
+                            a(href="#")
+                                i.fa.fa-trash-o
