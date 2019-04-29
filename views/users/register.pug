@@ -1,0 +1,18 @@
+extends layouts/main-layout.pug
+
+block body
+    #sec-register.body-container-wrapper.d-flex.align-items-center.justify-content-center.flex-column
+        .card.w-50.p-5
+            h3.text-center.mb-3 Register
+            p.text-center Fill the Following Details to be the part of Thakkar's Journal.
+            form#register_form
+                div.form-group.my-5
+                    input#inp_first-name.form-control.mb-3(name="inp_first-name",type="text",placeholder="First Name")
+                    input#inp_last-name.form-control.mb-3(name="inp_last-name",type="text",placeholder="Last Name")
+                    input#inp_email.form-control.mb-3(name="inp_email",type="text",placeholder="Email")
+                    input#inp_phone-number.form-control.mb-3(name="inp_phone-number",type="text",placeholder="Phone Number")
+                    textarea#inp_description.form-control(name="inp_description", cols="30", rows="10",placeholder="About Yourself")
+                a.register-button.btn.w-100(href="#") Send Request
+        .login-link-container.mt-5
+            p Already have an account?
+                a(href="/user/login")  Login

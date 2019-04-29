@@ -331,6 +331,108 @@
 #admin-container .config-form-wrapper .image-slider-container ul.home-page-image-list li.list-item.row div.delete-button-container a i.fa.fa-trash-o {
   font-size: 2.4rem;
 }
+#users .body-container-wrapper {
+  height: 100%;
+}
+#users .body-container-wrapper .button-container.row {
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#users .body-container-wrapper .button-container.row p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+#users .body-container-wrapper .button-container.row a {
+  font-size: 1.6rem;
+  color: #fff;
+}
+#users .body-container-wrapper .button-container.row a.btn.login {
+  background-color: #303e3e;
+}
+#users .body-container-wrapper .button-container.row a.btn.register {
+  background-color: #f54;
+}
+#users #sec-login .card h3 {
+  font-size: 2.2rem;
+}
+#users #sec-login .card p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+#users #sec-login .card .form-group .form-control {
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+#users #sec-login .card .form-group .form-control:focus,
+#users #sec-login .card .form-group .form-control:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#users #sec-login .card a.fgt-password,
+#users #sec-login .card .login-button {
+  font-size: 1.6rem;
+}
+#users #sec-login .card a.fgt-password {
+  color: #495057;
+}
+#users #sec-login .card a.fgt-password:hover {
+  text-decoration: none;
+  color: #495057;
+}
+#users #sec-login .card a.login-button {
+  color: #fff;
+  background-color: #303e3e;
+}
+#users #sec-login .sign-up-link-container p {
+  font-size: 1.6rem;
+}
+#users #sec-login .sign-up-link-container p a {
+  color: #f54;
+}
+#users #sec-login .sign-up-link-container p a:hover {
+  text-decoration: none;
+}
+#users #sec-register .card h3 {
+  font-size: 2.2rem;
+}
+#users #sec-register .card p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+#users #sec-register .card .form-group .form-control {
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+#users #sec-register .card .form-group .form-control:focus,
+#users #sec-register .card .form-group .form-control:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#users #sec-register .card a.register-button {
+  color: #fff;
+  background-color: #f45;
+  font-size: 1.6rem;
+}
+#users #sec-register .login-link-container p {
+  font-size: 1.6rem;
+}
+#users #sec-register .login-link-container p a {
+  color: #303e3e;
+}
+#users #sec-register .login-link-container p a:hover {
+  text-decoration: none;
+}
 html,
 body,
 .main-wrapper,

@@ -1,0 +1,16 @@
+extends layouts/main-layout.pug
+
+block body
+    #sec-login.body-container-wrapper.d-flex.align-items-center.justify-content-center.flex-column
+        .card.w-50.p-5
+            h3.text-center.mb-3 Welcome Back!
+            p.text-center Login to access your profile and profile settings.
+            div.form-group.my-5
+                input#inp_username.form-control.mb-3(type="text",placeholder="Username")
+                input#inp_password.form-control(type="password",placeholder="Password")
+            div.fgt-password-continer.mb-5
+                a.fgt-password.float-right(href="#") Forgot Password?
+            a.login-button.btn.w-100(href="#") Login
+        .sign-up-link-container.mt-5
+            p Don't have an account?
+                a(href="/user/register")  Register

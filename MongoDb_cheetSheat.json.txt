@@ -1,0 +1,182 @@
+db.about.insertOne({
+    _id: "abt-jt-0001",
+    title:"Indus institute of computer application",
+    subtitle:"Masters of Computer Application",
+    year:"class of 2011",
+    place:"Ahmedabad, Gujarat",
+    description:"I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.",
+    imageUrl:null,
+    userId:null
+})
+
+db.about.insertMany([
+    {
+        _id: "abt-jt-0002",
+        title:"R.J Tibrewal College of Computer Application",
+        subtitle:"Bachelors of Computer Application",
+        year:"class of 2008",
+        place:"Ahmedabad, Gujarat",
+        description:"I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.",
+        imageUrl:null,
+        userId:null
+    },
+    {
+        _id: "abt-jt-0003",
+        title:"Ansi ByteCode Pvt. Ltd.",
+        subtitle:"intern(Asp.net MVC)",
+        year:"Feb 2014",
+        place:"Ahmedabad, Gujarat",
+        description:"I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.",
+        imageUrl:null,
+        userId:null
+    },
+    {
+        _id: "abt-jt-0004",
+        title:"Asite Solutions Pvt. Ltd.",
+        subtitle:"UI Developer",
+        year:"July 2014",
+        place:"Ahmedabad, Gujarat",
+        description:"I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.",
+        imageUrl:null,
+        userId:null
+    },
+    {
+        _id: "abt-jt-0005",
+        title:"Indus institute of computer application",
+        subtitle:"Masters of Computer Application",
+        year:"class of 2011",
+        place:"Ahmedabad, Gujarat",
+        description:"I'm grateful for these three years. RJTCCA layed the foundation of what i am today, a UI Developer. RJTCCA is where i learned the basics of programming and computer languages like C , C++ , Visual Basic , C# , SQL and many more. RJTCCA was where I fell in love with learning, made good friends from whom i learned very good things and discovered a passion for the arts and drumming.",
+        imageUrl:null,
+        userId:null
+    }
+])
+
+db.about.updateOne({"_id":"abt-jt-1"},{$set:{title:"PlumSlice Labs Pvt. Ltd."}})
+
+db.about.updateMany({userId:null},{$set:{tag:"Jay Thakkar"}})
+
+/*
+    will delete all the records
+*/
+db.about.deleteMany({})
+
+/*
+    will delete all the records with the tag "Jay Thakkar"
+*/
+db.about.deleteMany({tag:"Jay Thakkar"})
+
+db.passengers.findOne({name:"Albert Twostone"}).hobbies
+
+db.passengers.findOne({hobbies:"cricket"})
+
+db.flights.find({"status.description":"on-time"}).pretty()
+
+[
+    {
+        firstName : "max",
+        lastName : "thakkar",
+        age : 29,
+        history : [
+            {disease : "cold", treatment:["agitromycin"]}
+        ]
+    },
+    {
+        firstName : "khagesh",
+        lastName : "bakri",
+        age : 29,
+        history : [
+            {disease : "acidity", treatment:["antacid"]}
+        ]
+    },
+    {
+        firstName : "montu",
+        lastName : "jadiyo",
+        age : 29,
+        history : [
+            {disease : "piles", treatment:["pilex"]}
+        ]
+    },
+    {
+        firstName : "bantu",
+        lastName : "chagan",
+        age : 29,
+        history : [
+            {disease : "obasity", treatment:["dieting"]}
+        ]
+    },
+    {
+        firstName : "magan",
+        lastName : "ram",
+        age : 29,
+        history : [
+            {disease : "heart Attack", treatment:["bypass surgery"]}
+        ]
+    }
+]
+
+db.createCollection('patients')
+
+db.patients.insertMany([
+    {
+        firstName : "max",
+        lastName : "thakkar",
+        age : 29,
+        history : [
+            {disease : "cold", treatment:["agitromycin"]}
+        ]
+    },
+    {
+        firstName : "khagesh",
+        lastName : "bakri",
+        age : 29,
+        history : [
+            {disease : "acidity", treatment:["antacid"]}
+        ]
+    },
+    {
+        firstName : "montu",
+        lastName : "jadiyo",
+        age : 29,
+        history : [
+            {
+                disease : "piles",
+                treatment:["pilex"]
+            }
+        ]
+    },
+    {
+        firstName : "bantu",
+        lastName : "chagan",
+        age : 29,
+        history : [
+            {
+                disease : "obasity",
+                treatment:["dieting"]
+            }
+        ]
+    },
+    {
+        firstName : "magan",
+        lastName : "ram",
+        age : 29,
+        history : [
+            {
+                disease : "heart Attack",
+                treatment:["bypass surgery"]
+            }
+        ]
+    }
+])
+
+db.patients.updateOne({firstName:"montu",lastName:"jadiyo"},{$set:{age:45,name:"chandu",history:[{disease:"leg fracture",treatment:"cutting of the leg"}]})
+
+db.patients.find({age:{$gt:30}})
+
+db.patients.deleteMany({"history.disease":"cold"})
+
+user
+
+appserver
+
+JayKhyati07

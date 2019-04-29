@@ -1,0 +1,12 @@
+extends layouts/main-layout.pug
+
+block body
+    .body-container-wrapper.d-flex.align-items-center.justify-content-center
+        .option-container.card.w-50
+            img.card-img-top
+            .card-body
+                h1.text-center.mb-5 Hi!, Welcome to "The Thakkar's Journal"
+                .button-container.row
+                    a.btn.login(href="/user/login") Login
+                    p.text-center.my-2 or
+                    a.btn.register(href="/user/register") Be a Part of our Journal

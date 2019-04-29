@@ -19,6 +19,7 @@ app.use(stylus.middleware({
 }));
 const genericRoutes = require('./routes/index');
 const adminRoutes = require('./routes/admin/admin');
+const userRoutes = require('./routes/user/user');
 
 // const router = express.Router();
 // router.get('/',( request , response , next ) => {
@@ -51,6 +52,7 @@ app.use(express.static(path.join(pathUtil.getRootDirname(),'public')));
 app.use(express.static(path.join(pathUtil.getRootDirname(),'node_modules','bootstrap','dist')));
 
 app.use('/admin',adminRoutes);
+app.use('/user',userRoutes);
 app.use(genericRoutes);
 app.use((request,response,next)=>{
     response.status(404).send('<h1>Page Not Found</h1>');

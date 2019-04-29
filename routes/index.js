@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const pathUtil = require('../util/path');
 const fs = require('fs');
-router.get('/',(request,response,next)=> {
+/* router.get('/',(request,response,next)=> {
     // response.sendFile(path.join(pathUtil.getRootDirname(),'views','demos','shoping-cart','shop.html'));
     var abouts = [
         {
@@ -122,6 +122,10 @@ router.get('/',(request,response,next)=> {
         }
     }
     response.render('main',{docTitle:"My Shop",abouts:abouts,beliefs:beliefs,passionImages:passionImages,contacts:contacts});
+}); */
+
+router.get('/',(request,response,next) => {
+    response.render('users/welcome',{docTitle:"The Thakkar's Diary"});
 });
 
 module.exports = router;
