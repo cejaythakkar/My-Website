@@ -9,19 +9,15 @@ html(lang="en")
         link(rel="stylesheet", href="/css/font-awesome.min.css")
         block css
     body
-        main.admin-content-wrapper#admin-container
-            section.sidebar-container
-                .nav-wrapper
-                    ul
-                        li
-                            a(href="/admin") Home
-                        li
-                            a(href="/admin/about") About
-                        li
-                            a(href="/admin/belief") Belief
-                        li
-                            a(href="/admin/passion") Passion
-                        li
-                            a(href="/admin/connect") Connect
-            block body-content
+        main.admin-content-wrapper.row.m-0#admin-container
+            include sidebar.pug
+            section.content-body-wrapper.col-lg-9.p-0
+                block main-content
+                    .page-body-wrapper.col-lg-8
+                        .header-container
+                            block header
+                        div.body-container#config-content
+                            block page-content
+                    .page-sidebar-wrapper.col-lg-4.p-0
+                        block image-sidebar
         block scripts            

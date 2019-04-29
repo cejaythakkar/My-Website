@@ -6,47 +6,39 @@ block css
     link(rel="stylesheet", href="/css/main.css")
     link(rel="stylesheet", href="/css/bootstrap.min.css")
 
-block body-content
-    section.content-body-wrapper
-        h1 Home Page Configuration
-        .config-form-wrapper
-            form.config-form.form-group(action="/admin/home",method="POST")
-                div.form-control
-                    label(for="greeting") Greetings 
-                    input(type="text",name="greeting",value=data && data.greetings)
-                div.form-control
-                    label(for="role") Role
-                    input(type="text",name="role",value=data && data.role)
-                div.form-control
-                    label(for="introduction") Introduction
-                    textarea(name="introduction", cols="30", rows="10") #{data && data.intro}
-                .form-control
-                    if(data!==null)
-                        button(type="submit") Update
-                    else
-                        button(type="submit") Add
-            .image-slider-wrapper
-                .image-slider-header
-                .image-slider-body
-                    //- form.img-uploader-form(enctype="multipart/form-data",id="img-upload-form",action="/admin/home/img",method="POST")
-                    //-     input(type="file",multiple,name="img-uploader")
-                    //-     button(type="submit") add pictures
-                    form.img-uploader-form(submit="")
-                        input(type="file",multiple,name="img-uploader")
-                        button(type="submit") add pictures
-                    #file-list-to-upload
+block header
+    h1 Home Page Configurations
 
-                    .image-slider-container
-                        ul.home-page-image-list
-                            each image in data.images
-                                li.list-item.row
-                                    div.image-container
-                                        img(src=image.imageUrl, alt="",onerror="this.src='images/no-image.png'")
-                                    .description-container.d-flex.flex-grow-1.align-items-center.justify-content-center
-                                        span #{image.short_description}
-                                    .delete-button-container.d-flex.align-items-center
-                                        a(href="#")
-                                            i.fa.fa-trash-o
+block page-content
+    .config-form-wrapper
+        form.config-form.form-group(action="/admin/home",method="POST")
+            div
+                label(for="greeting") Greetings 
+                input.form-control(type="text",name="greeting",value=data && data.greetings)
+            div
+                label(for="role") Role
+                input.form-control(type="text",name="role",value=data && data.role)
+            div
+                label(for="introduction") Introduction
+                textarea.form-control(name="introduction", cols="30", rows="10") #{data && data.intro}
+            div
+                if(data!==null)
+                    button.btn.btn-primary(type="submit") Update
+                else
+                    button(type="submit") Add
+        .image-slider-wrapper
+            .image-slider-header
+            .image-slider-body
+                //- form.img-uploader-form(enctype="multipart/form-data",id="img-upload-form",action="/admin/home/img",method="POST")
+                //-     input(type="file",multiple,name="img-uploader")
+                //-     button(type="submit") add pictures
+                form.img-uploader-form(submit="")
+                    input(type="file",multiple,name="img-uploader")
+                    button(type="submit") add pictures
+                #file-list-to-upload
+
+block image-sidebar
+    include layout/slider-images-sidebar.pug
 
 block scripts
     script(src="/templates/home/imageListing.js")

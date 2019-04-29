@@ -1,28 +1,63 @@
 #admin-container
     .config-form-wrapper
         .form-group
+            div{
+                margin-bottom:1rem
+            }
             .form-control
                 height:auto;
                 border:none;
-                background-color:transparent;
-        .image-slider-container
-            ul.home-page-image-list
-                list-style:none
-                li.list-item.row
-                    margin:1rem 0;
-                    border-bottom: 1px solid #000000;
-                    padding: 1rem
-                    div.image-container
-                        height:200px
-                        width:200px
-                        border: 1px solid #000000;
-                        padding: .5rem;
-                        img
-                            height:100%
-                            width:100%
-                            object-fit:cover
+.page-sidebar-header
+    padding:2rem 1rem;
+    border-bottom:1px solid #303e3e;
+    height:7.5rem;
+    box-sizing:border-box;
+    background-color:white;
+    h1#page-sidebar-header-title
+        display:inline-block;
+    a.add-button
+        float:right;
+.image-slider-container
+    height:100%
+    overflow:auto
+    ul.home-page-image-list
+        list-style:none
+        padding:0
+        li.list-item.row
+            margin:1rem 0;
+            padding: 1rem
+            div.image-container
+                position:relative;
+                height:200px
+                width:100%
+                border: 1px solid #000000;
+                padding: .5rem;
+                &:hover div.description-container{
+                    display:flex !important;
+                }
+                img{
+                    height:100%
+                    width:100%
+                    object-fit:cover
+                }
+                div.description-container
+                    position:absolute
+                    background:rgba(0,0,0,.2)
+                    height:100%
+                    width:100%
+                    top:0
+                    left:0
+                    display:none !important
+                    span{
+                        color:#fff;
+                        font-size:1.5rem;
+                    }
                     div.delete-button-container
+                        position:absolute;
+                        right:1rem
+                        top:1rem
                         a
                             display:inline-block;
                             i.fa.fa-trash-o
                                 font-size:2.4rem;
+                                color:#fff
