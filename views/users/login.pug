@@ -5,12 +5,14 @@ block body
         .card.w-50.p-5
             h3.text-center.mb-3 Welcome Back!
             p.text-center Login to access your profile and profile settings.
-            div.form-group.my-5
-                input#inp_username.form-control.mb-3(type="text",placeholder="Username")
-                input#inp_password.form-control(type="password",placeholder="Password")
-            div.fgt-password-continer.mb-5
-                a.fgt-password.float-right(href="#") Forgot Password?
-            a.login-button.btn.w-100(href="#") Login
+            form#login-form(method="POST",action="/user/login")
+                div.form-group.my-5
+                    input#inp_username.form-control.mb-3(name="inp_username",type="text",placeholder="Username")
+                    input#inp_password.form-control(name="inp_password",type="password",placeholder="Password")
+                    div.fgt-password-continer.my-5.text-right 
+                        a.fgt-password(href="#") Forgot Password?
+                    button.login-button.btn.w-100#login-button(type="submit") Login
         .sign-up-link-container.mt-5
             p Don't have an account?
                 a(href="/user/register")  Register
+

@@ -18,6 +18,7 @@ html(lang="en")
                             block header
                         div.body-container#config-content
                             block page-content
-                    .page-sidebar-wrapper.col-lg-4.p-0
-                        block image-sidebar
+                    if toShowContentsidebar
+                        .page-sidebar-wrapper.col-lg-4.p-0
+                            block image-sidebar
         block scripts            

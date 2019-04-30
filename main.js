@@ -4,6 +4,12 @@ const app = express();
 const bodyParser = require('body-parser'),
       multer = require('multer'),
       port=process.env.PORT || 3001;
+const session = require('express-session');
+const mongoDbStore = require('connect-mongodb-session')(session);
+const store = new mongoDbStore({
+    uri:require('./util/database').MONGODB_URI,
+    collection:'sessions'
+})
 const pathUtil = require('./util/path'),
         stylus = require('stylus'),
         nib = require('nib');
@@ -17,6 +23,7 @@ app.use(stylus.middleware({
         return stylus(str).set('filename',path).use(nib());
     }
 }));
+
 const genericRoutes = require('./routes/index');
 const adminRoutes = require('./routes/admin/admin');
 const userRoutes = require('./routes/user/user');
@@ -28,6 +35,11 @@ const userRoutes = require('./routes/user/user');
 // app.use(express.static(path.join(__dirname,'../', 'build')));
 
 app.use(bodyParser.urlencoded({extended:false}));
+app.use(session({secret:`jay khyati mahesh bharti sneh shruti and his baby`,
+                resave:false,
+                saveUninitialized:false,
+                store:store
+}));
 const storage = multer.diskStorage({
     destination:(request,file,callback)=>{
         callback(null,path.join(pathUtil.getRootDirname(),'public','images','home'));

@@ -18,7 +18,9 @@ const Img = require('../../models/home/image'),
       
       passionController = require('../../controllers/admin/passion/passion'),
 
-      connectController = require('../../controllers/admin/connect/connect');
+      connectController = require('../../controllers/admin/connect/connect'),
+
+      notificationsController = require('../../controllers/admin/notifications/notifications');
 let homeDetailData;
 router.post('/home',(request,response,next)=> {
     const greeting = request.body.greeting;
@@ -52,6 +54,8 @@ router.get('/belief',beliefController.renderBeliefConfigPage);
 router.get('/passion',passionController.renderPassionConfigPage);
 
 router.get('/connect',connectController.renderConnectConfigPage);
+
+router.get('/notifications',notificationsController.renderNotificationPage);
 
 router.get('/',homeController.renderHomeConfigPage);
 

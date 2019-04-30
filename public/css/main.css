@@ -510,7 +510,7 @@ main.admin-content-wrapper .page-sidebar-wrapper {
   text-decoration: none;
   color: #495057;
 }
-#users #sec-login .card a.login-button {
+#users #sec-login .card button.login-button {
   color: #fff;
   background-color: #303e3e;
 }
@@ -554,6 +554,39 @@ main.admin-content-wrapper .page-sidebar-wrapper {
   color: #303e3e;
 }
 #users #sec-register .login-link-container p a:hover {
+  text-decoration: none;
+}
+#users #sec-signup .card h3 {
+  font-size: 2.2rem;
+}
+#users #sec-signup .card p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+#users #sec-signup .card .form-group .form-control {
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+#users #sec-signup .card .form-group .form-control:focus,
+#users #sec-signup .card .form-group .form-control:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#users #sec-signup .card button.signup-button {
+  color: #fff;
+  background-color: #303e3e;
+  font-size: 1.6rem;
+}
+#users #sec-signup .sign-up-link-container p {
+  font-size: 1.6rem;
+}
+#users #sec-signup .sign-up-link-container p a {
+  color: #f54;
+}
+#users #sec-signup .sign-up-link-container p a:hover {
   text-decoration: none;
 }
 html,
