@@ -62,6 +62,7 @@ const filefilter = (request , file , callback) => {
 app.use(multer({storage:storage,fileFilter:filefilter}).any());
 app.use(express.static(path.join(pathUtil.getRootDirname(),'public')));
 app.use(express.static(path.join(pathUtil.getRootDirname(),'node_modules','bootstrap','dist')));
+app.use(express.static(path.join(pathUtil.getRootDirname(),'reactapp','build','static')));
 
 app.use('/admin',adminRoutes);
 app.use('/user',userRoutes);

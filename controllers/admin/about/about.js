@@ -1,3 +1,3 @@
 exports.renderAboutConfigPage =  (request,response,next) => {
-    response.render('admin/about');
+    response.render('admin/about',{user:request.session.user});
 }

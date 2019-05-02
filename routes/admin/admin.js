@@ -8,6 +8,8 @@ const pathUtil = require('../../util/path');
 
 const homeDetail = require('../../models/home');
 
+const isAuth = require('../../middlewares/auth');
+
 const Img = require('../../models/home/image'),
 
       homeController = require('../../controllers/admin/home/home'),
@@ -22,7 +24,7 @@ const Img = require('../../models/home/image'),
 
       notificationsController = require('../../controllers/admin/notifications/notifications');
 let homeDetailData;
-router.post('/home',(request,response,next)=> {
+router.post('/home',isAuth,(request,response,next)=> {
     const greeting = request.body.greeting;
     const role = request.body.role;
     const introduction = request.body.introduction;
@@ -32,7 +34,7 @@ router.post('/home',(request,response,next)=> {
         homeDetail.updateHomePageDetails({greeting,role,introduction},() => response.redirect('/admin'))
     }
 });
-router.post('/home/img',(request,response,next) => {
+router.post('/home/img',isAuth,(request,response,next) => {
     let documents = [];
     request.files.forEach(file => {
         documents.push({
@@ -47,16 +49,16 @@ router.post('/home/img',(request,response,next) => {
         }).catch(err => console.log(err));
     });
 });
-router.get('/about',aboutController.renderAboutConfigPage);
+router.get('/about',isAuth,aboutController.renderAboutConfigPage);
 
-router.get('/belief',beliefController.renderBeliefConfigPage);
+router.get('/belief',isAuth,beliefController.renderBeliefConfigPage);
 
-router.get('/passion',passionController.renderPassionConfigPage);
+router.get('/passion',isAuth,passionController.renderPassionConfigPage);
 
-router.get('/connect',connectController.renderConnectConfigPage);
+router.get('/connect',isAuth,connectController.renderConnectConfigPage);
 
-router.get('/notifications',notificationsController.renderNotificationPage);
+router.get('/notifications',isAuth,notificationsController.renderNotificationPage);
 
-router.get('/',homeController.renderHomeConfigPage);
+router.get('/',isAuth,homeController.renderHomeConfigPage);
 
 module.exports = router;

@@ -18,12 +18,13 @@ section.sidebar-container.col-lg-3
             li.nav-link
                 a(href="/admin/connect")
                     h3 Connect
-            li.nav-link
-                a(href="/admin/users")
-                    h3 Users
-            li.nav-link
-                a(href="/admin/notifications")
-                    h3 Notifications
+            if user.userType === "SUPERADMIN"
+                li.nav-link
+                    a(href="/admin/users")
+                        h3 Users
+                li.nav-link
+                    a(href="/admin/notifications")
+                        h3 Notifications
             li.nav-link
                 form(action="/user/logout",method="POST")
                     input#logout-button(type="submit",value="Logout")
