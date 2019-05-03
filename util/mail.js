@@ -1,4 +1,4 @@
-const nodeMailer = require('nodeMailer'),
+const nodeMailer = require('nodemailer'),
       sendGridTransport = require('nodemailer-sendgrid-transport'),
       transporter = nodeMailer.createTransport(sendGridTransport({
           auth:{
