@@ -22,7 +22,9 @@ const Img = require('../../models/home/image'),
 
       connectController = require('../../controllers/admin/connect/connect'),
 
-      notificationsController = require('../../controllers/admin/notifications/notifications');
+      notificationsController = require('../../controllers/admin/notifications/notifications'),
+      
+      todosController = require('../../controllers/admin/todos/todos');
 let homeDetailData;
 router.post('/home',isAuth,(request,response,next)=> {
     const greeting = request.body.greeting;
@@ -58,6 +60,8 @@ router.get('/passion',isAuth,passionController.renderPassionConfigPage);
 router.get('/connect',isAuth,connectController.renderConnectConfigPage);
 
 router.get('/notifications',isAuth,notificationsController.renderNotificationPage);
+
+router.get('/todos',isAuth,todosController.renderTodopage);
 
 router.get('/',isAuth,homeController.renderHomeConfigPage);
 

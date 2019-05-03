@@ -10,6 +10,7 @@ block body
                     input#inp_username.form-control.mb-3(name="inp_username",type="text",placeholder="Username")
                     input#inp_password.form-control.mb-3(name="inp_password",type="password",placeholder="Password")
                     input#inp_confirm-password.form-control(type="password",placeholder="Confirm Password")
+                    input(type="hidden",name="request_id",value=requestId)
                 button.signup-button.btn.w-100(type="submit") Signup
         .login-link-container.mt-5
             p Already have an account?

@@ -5,6 +5,8 @@ block body
         .card.w-50.p-5
             h3.text-center.mb-3 Register
             p.text-center Fill the Following Details to be the part of Thakkar's Journal.
+            if error
+                p #{error.message}
             form#register_form
                 div.form-group.my-5
                     input#inp_first-name.form-control.mb-3(name="inp_first-name",type="text",placeholder="First Name")
@@ -16,3 +18,4 @@ block body
         .login-link-container.mt-5
             p Already have an account?
                 a(href="/user/login")  Login
+

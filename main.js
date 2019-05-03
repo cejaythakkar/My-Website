@@ -14,6 +14,7 @@ const pathUtil = require('./util/path'),
         stylus = require('stylus'),
         nib = require('nib');
 const mongoConnect = require('./util/database').mongoConnect;
+const flash = require('connect-flash');
 app.set('view engine','pug');
 app.set('views','views');
 app.use(stylus.middleware({
@@ -40,6 +41,7 @@ app.use(session({secret:`jay khyati mahesh bharti sneh shruti and his baby`,
                 saveUninitialized:false,
                 store:store
 }));
+app.use(flash());
 const storage = multer.diskStorage({
     destination:(request,file,callback)=>{
         callback(null,path.join(pathUtil.getRootDirname(),'public','images','home'));
@@ -62,7 +64,7 @@ const filefilter = (request , file , callback) => {
 app.use(multer({storage:storage,fileFilter:filefilter}).any());
 app.use(express.static(path.join(pathUtil.getRootDirname(),'public')));
 app.use(express.static(path.join(pathUtil.getRootDirname(),'node_modules','bootstrap','dist')));
-app.use(express.static(path.join(pathUtil.getRootDirname(),'reactapp','build','static')));
+app.use(express.static(path.join(pathUtil.getRootDirname(),'react-client','build','static')));
 
 app.use('/admin',adminRoutes);
 app.use('/user',userRoutes);

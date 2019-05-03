@@ -1,21 +1,44 @@
 const User = require('../../models/user');
+const Request = require('../../models/request');
 const bcrypt = require('bcryptjs');
-
 exports.getSignupPage = (request,response,next) => {
-    response.render('users/signup',{docTitle:"Sign up"});
+    response.render('users/signup',{docTitle:"Sign up",requestId : request.query.requestId});
 }
 
 exports.signupPost = (request,response,next) => {
     const userName = request.body.inp_username,
-          password = request.body.inp_password;
-    User.findUser(userName).then((user) => {
-        if(user){
-            return response.redirect('/user/signup');
+          password = request.body.inp_password,
+          requestId = request.body.request_id
+    let   firstName,
+          lastName,
+          email,
+          phone,
+          userType;
+    if(!requestId){
+        request.flash('error',{errorType:'danger',message:`It Seems You havn't registered with us!! please Register first..`});
+        return response.redirect('/user/register');
+    }
+    Request.findById(requestId).then(r => {
+        if(!r){
+            request.flash('error',{errorType:'danger',message:`It Seems You havn't registered with us!! please Register first..`});
+            return response.redirect('/user/register');
         }
-        bcrypt.hash(password,12).then(hashedPassword => {
-            new User(null,null,null,null,userName,null,hashedPassword).save().then(() => {
-                response.redirect('/user/login');
+        firstName = r.firstName;
+        lastName = r.lastName;
+        email = r.email;
+        phone = r.phone;
+        userType = "MEMBER";
+        User.findUser(userName).then((user) => {
+            if(user){
+                request.flash('error',{errorType:'info',message:`The Username is already registered!! please login..`});
+                return response.redirect('/user/login');
+            }
+            bcrypt.hash(password,12).then(hashedPassword => {
+                new User(firstName,lastName,email,phone,userName,userType,hashedPassword).save().then(() => {
+                    response.redirect('/user/login');
+                }).catch(err => console.log(err));
             }).catch(err => console.log(err));
         }).catch(err => console.log(err));
-    }).catch(err => console.log(err));
+    }).catch(err => console.log(err))
+    
 }

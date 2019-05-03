@@ -5,6 +5,8 @@ block body
         .card.w-50.p-5
             h3.text-center.mb-3 Welcome Back!
             p.text-center Login to access your profile and profile settings.
+            if error
+                p #{error.message}
             form#login-form(method="POST",action="/user/login")
                 div.form-group.my-5
                     input#inp_username.form-control.mb-3(name="inp_username",type="text",placeholder="Username")
