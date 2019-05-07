@@ -1,0 +1,9 @@
+----- mongodb cheetsheat -----
+
+show dbs
+
+use flights
+
+db.flightData.insertOne({
+	
+})
