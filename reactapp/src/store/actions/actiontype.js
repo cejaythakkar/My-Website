@@ -8,4 +8,7 @@ const ActionType = {
     DELETE_RESULT : 'DELETE_RESULT',
 }
 
+
+
 export default ActionType;
+

@@ -36,7 +36,7 @@ block page-content
                     input(type="file",multiple,name="img-uploader")
                     button(type="submit") add pictures
                 #file-list-to-upload
-
+        
 block image-sidebar
     include layout/slider-images-sidebar.pug
 
@@ -44,3 +44,5 @@ block scripts
     script(src="/templates/home/imageListing.js")
     script(src="/templates/home/filesToUploadList.js")
     script(src="/js/admin/home/home.js")
+    script.
+        window.user = JSON.parse('!{JSON.stringify(user)}');

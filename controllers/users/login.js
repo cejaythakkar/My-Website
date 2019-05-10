@@ -20,7 +20,6 @@ exports.loginPost = (request,response,next) => {
             }
             request.session.user = user;
             request.session.save(err => {
-                console.log(err);
                 response.redirect('/admin')
             })
         })
