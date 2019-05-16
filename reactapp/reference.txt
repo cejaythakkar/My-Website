@@ -1,0 +1,223 @@
+----- full stack developer -----
+
+	----- Es6 -----
+	
+		
+
+	----- html5 apis -----
+	
+		fetch api
+		diffference between xmlHttpRequest and fetch api
+
+	----- React ---
+
+		----- react basics -----
+		
+			types of components in react
+			
+				1 ) class based component for state management( container components )
+				2 ) functional component for presentational purpose( presentational components )
+				
+				----- before react 16.8 functional components did not have any state management mechanism
+				
+				----- component lifecycle methods
+				
+					constructor
+					getDerivedStateFromProps
+					getSnapshotBeforeUpdate
+					componentDidCache
+					componentWillUnmount
+					shouldComponentUpdate
+					componentDidUpdatecomponentdidMount
+					render
+					
+					----- component lifecycle - creation
+					
+						constructor(props)
+							do - set up state
+							don't - make ajax request or store data in local storage cause unnecessary re-renders
+						
+						static getDerivedStateFromProps(16.3)
+							do - sync state
+							dont't - side effect
+							
+						render
+							prepare and structure jsx code
+							
+						render child components
+						
+						componentDidMount()
+							do - make ajax request
+							don't - update state as it triggers re-render
+							
+					----- component lifecycle - updation when ( props or state change )
+					
+						----- props and state change are the two triggers in react which makes react to re-evaluate the component
+						
+						getDerivedStateFromProps(props,state)
+						
+						shouldComponentUpdate(nextprops,nextstate)
+						
+						render()
+						
+						update Child Component Props
+						
+						getSnapshotBeforeUpdate(prevProps,prevState)
+						
+						componentDidUpadte
+							--- can make http request
+							don't update teh state as it triggers re-render f the component , it will run the infinite loop if u change the state of the component in this lifecycle method
+							
+		----- React Hooks
+		
+			import { useEffect } from 'react'
+		
+			----- add it in functional component body
+			
+				usEffect(()=>{ // function passed to useEffect will run for every render cycle of the functional component
+					console.log()
+					// u can maki http calls in here
+				
+				----- re-render does't mean re-rendering the real DOM, but the virtual dom instead.
+			
+			----- controling the behaviour of the useEffect
+				
+				useEffect(() =>{
+					setTimeout(() => {
+						
+					},1000)
+				},[props.persons])
+				
+				
+			----- exectute the react hook when component renders for the first time
+			
+				useEffect(() =>{
+					setTimeout(() => {
+						
+					},1000)
+				},[])
+				
+			----- cleanUp work in class components and functional compoents(UseEffect)
+			
+				componentWillUnmount() in class
+				
+				useEffect(() => {
+				
+					return () => {
+						when the component unmounts
+						console.log('clean up work');
+					}
+					
+				},[]) 
+				
+			----- shouldComponentUpdate optimization
+			
+				shouldComponentUpdate(nextProps,nextState){
+					next.persons !== this.props.persons
+						return true
+					else
+						return false
+				}
+
+				
+		----- axios -----
+		
+			npm install --save axios
+			
+			
+			----- get request -----
+			
+				componentDidMount(){
+					axios.get('url')
+				}
+				
+				----- if you want make an ajax request when the components revieves valid data by props and set the state of the 	component , you should use componentDidUpdate lifecycle method.
+				
+			----- post request -----
+			
+				axios.post('url',{payload}).then(r => console.log(r));
+				
+			----- Delete Request -----
+			
+				axios.delete('url'+ id).then(r => console.log(r));
+				
+			----- Handling Errors Locally -----
+			
+				axios.then().catch(err => console.log(err));
+			
+			----- interceptors
+			
+				uses:-
+				
+					to set common header to each request ,
+					to log responses
+					want to handle erros globally
+			
+				index.js file
+				
+					import axios from 'axios'
+					
+					axios.interceptors.request.use(request => {
+						console.log(request);
+						return request
+					},error => {
+						console.log(error);
+						Promise.reject(error);
+					})
+				
+					axios.inteceptors.response.use(respose => {
+						
+					},error => )
+					
+					----- removing the interceptors
+					
+					var myInterceptor = axios.interceptors.request.use(function () {/*...*/});
+					axios.interceptors.request.eject(myInterceptor);
+
+			----- Default Global Configuration for axios
+			
+				axios.defaults.baseURL = 'url'
+				axios.defaults.headers.common['Authorization] = 'auth token'
+				axios.defaults.headers.post['content-Type] = 'application/json'
+				
+			----- Creating and Using Axios Instance
+			
+				axios.js (At the root level)
+				
+					import axios from axios;
+					
+					const instance = axios.create({
+						baseURL : 'URL'
+					})
+					
+					instance.defaults.headers.comon['Authorization'] = 'Auth Token From Instance'
+					
+					export default instance;
+					
+					---- usage
+					
+						import axios from axios
+				
+		runtime module loading in react
+		redux
+		react hooks
+		context api
+		forms in react
+		
+	----- Angular -----
+	
+	----- React Native -----
+	
+	----- node.js -----
+	
+		----- mangoose
+		
+	----- Mongo.Db -----
+	
+	----- C# Asp.net MVC -----
+	
+	----- python -----
+	
+	----- next.js -----
+	
+	
