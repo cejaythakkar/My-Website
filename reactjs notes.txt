@@ -1,0 +1,51 @@
+<Switch>
+                <Route path="/admin" exact component={} />
+                <Route path="/admin/about" exact component={AboutList} />
+                <Route path="/admin/passion" exact component={PassionList} />
+                <Route path="/admin/about/add" exact component={AddAbout} />
+                <Route path="/admin/todos" exact render={() => <Todos />} />
+                <Route path="/admin/posts" exact render={() => <PostWrapper />} />
+                <Route path="/admin/counter" exact render={() => <Counter />} />
+              </Switch>
+			  
+			  
+routing in react 
+
+npm install --save react-router react-router-dom
+
+wrap you app with BrowserRouter
+
+this.props.match.url
+
+componentDidUpdate
+
+redirecting the user
+
+Redirect
+	from "/" to="posts"
+	
+conditional redirects
+
+lazy loading or code splitting - react router 4 or above and create-react-app
+
+create hoc asyncComponent.js
+
+const acyncComponent = (impotComponent) => {
+	react class extends Component{
+		state = {
+			component :null
+		}
+		
+		compoientDidMount(){
+			importComponent().then(cmp => {
+				this.setState({component :cmp.default})
+			})
+		}
+		
+		render(){
+		}
+	}
+}
+
+
+

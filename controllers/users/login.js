@@ -18,7 +18,8 @@ exports.loginPost = (request,response,next) => {
                 request.flash('error',{errorType:'danger',message:'Incorrect Password!!'});
                 return response.redirect('/user/login');
             }
-            request.session.user = user;
+            
+            request.session.user = {userName:user.userName,email:user.email,_id:user._id};
             request.session.save(err => {
                 response.redirect('/admin')
             })

@@ -1,0 +1,15 @@
+-var className
+case errorType
+    when "danger"
+        -className="danger"
+    when "info"
+        -className="info"
+    when "success"
+        -className="success"
+    when "warning"
+        -className="warning"
+    default
+        -className=""
+p#error-message(class=className) #{message}
+    a(onclick="UsersModule.errorCloseHandler(event)")
+        i.fa.fa-close(click="UsersModule.errorCloseHandler(event)")
