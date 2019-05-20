@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CounterOutput from '../../components/counteroutput';
 import CounterControl from '../../components/countercontrol';
 import { connect } from 'react-redux'
-import { increment , decrement , add , subtract , reset , storeResult , deleteResult } from '../../store/actions/index';
+import { increment , decrement , add , subtract , reset , storeResult , deleteResult } from '../../store/actions';
 
 class Counter extends Component {
   render() {

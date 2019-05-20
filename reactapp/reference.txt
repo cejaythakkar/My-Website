@@ -165,7 +165,7 @@
 						Promise.reject(error);
 					})
 				
-					axios.inteceptors.response.use(respose => {
+					axios.inteceptors.response.use(response => {
 						
 					},error => )
 					
@@ -211,7 +211,155 @@
 	----- node.js -----
 	
 		----- mangoose
-		
+
+				npm install --save mongoose
+			
+			----- main.js
+
+
+				const mongoose = require('mongoose')
+				mongoose.connect('url').then(() => {
+
+				}).catch(() => {});
+
+			----- product.js
+
+				const mongoose = require('mongoose');
+
+				const schema = mongoose.Scheme;
+
+				const productSchema = new Schema({
+					title:{
+						type:string,
+						required:true
+					},
+					price:{
+						type:Number,
+						required:true
+					},
+					description:{
+						type:string,
+						required:true
+					},
+					imageUrl:{
+						type:string,
+						required:true
+					},
+				})
+
+			----- saving data through mongoose
+
+				module.export = mongoose.model('Product',productSchema)
+
+				----- admin.js
+
+					new Product({
+						title,
+						price,
+						description,
+						imageUrl
+					}).save().then();
+
+			----- fetching data throught mongoose
+
+				Product.find() // return an array
+
+			----- fetching details from mongoose(filtering)
+
+				Product.findById(prodId)
+
+			----- updating a product
+
+				Product.findById(prodId).then(product => {
+					product.title = updatedTitle;
+					product.price = updatedPrice;
+					product.description = updateDesc;
+					product.imageUrl = updatedImageUrl;
+					return Product.save()
+				})
+				.then(() => {
+					
+				})
+
+			----- deleting data
+
+				Product.findByIdAndRemove(prodId).then(() => {
+
+				})
+
+			----- relations in mongoose
+
+				----- user.js
+
+					const mongoose = require('mongoose');
+
+					const Schema = mongoose.Schema;
+
+					const userSchema = new Schema({
+						name:{
+
+						},
+						email:{
+
+						},
+						cart:{
+							items:[{
+									productId:{type:Schema.Types.ObjectId},
+									quantity:{type:number,required:true}
+							]
+						}
+					})
+
+					export default mongoose.model('user',userschema)
+
+			----- references in mongoose
+
+				userId: {
+					type:Schema.Types.ObjectId,
+					ref:'User',
+					requred:true
+				}
+
+				----- new Product storing reference
+
+					new Product({
+						title:title,
+						price:price,
+						description:description,
+						imageUrl : imageUrl,
+						userId : request.user._id
+					}).save()
+
+			----- fetching relations in mongoose
+
+				Product.
+				find().
+				select('title price -Id').
+				populate('userId','name').
+				then()
+
+		----- add to cart
+
+		userSchema.methods.addToCart = function(product) {
+			
+		}
+
+			----- shop.js
+
+			req.user.add
+
+		req.user.populate('cart.items.productId').execpopulate()
+
+		----- delete cart
+
+		userSchema.method.removeFromCaart = function(productId){
+			return this.save()
+		}
+
+		----- ordering
+
+						
+
 	----- Mongo.Db -----
 	
 	----- C# Asp.net MVC -----

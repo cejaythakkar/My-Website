@@ -5,9 +5,9 @@ class List extends React.Component {
     render() {
         const list = this.props.data.map(item => {
             return (
-                <li key={item._id}>
-                    <Link to={`/admin/about/${item._id}`}>
-                        <div className="about-item-container card my-3 p-4">
+                <li key={item._id} className="list-item mb-4">
+                    <Link className="d-block" to={`/admin/about/${item._id}`}>
+                        <div className="about-item-container card p-4">
                             <div className="img-container"></div>
                             <h3 className="title">{item.title}</h3>
                             <h5 className="subtitle">{item.subTitle}</h5>

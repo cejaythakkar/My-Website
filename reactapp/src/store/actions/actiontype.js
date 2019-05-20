@@ -6,9 +6,9 @@ const ActionType = {
     RESET :'RESET',
     STORE_RESULT : 'STORE_RESULT',
     DELETE_RESULT : 'DELETE_RESULT',
+    SHOW_SPINNER : 'SHOW_SPINNER',
+    HIDE_SPINNER : 'HIDE_SPINNER'
 }
-
-
 
 export default ActionType;
 

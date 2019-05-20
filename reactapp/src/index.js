@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { createStore , combineReducers , applyMiddleware , compose  } from 'redux';
+import { createStore , combineReducers , applyMiddleware , compose  } from 'C:/Users/bdoshi/AppData/Local/Microsoft/TypeScript/2.9/node_modules/redux';
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import counterReducer  from './store/reducers/counter';
 import resultsReducer  from './store/reducers/results';
 import configReducer  from './store/reducers/config';
-
+import spinnerReducer from './store/reducers/spinner';
+import './index.css';
 
 const rootReducer = combineReducers({
     ctr : counterReducer,
     res : resultsReducer,
-    config : configReducer
+    config : configReducer,
+    spinner: spinnerReducer
 })
 
 const logger = ( store ) => {
