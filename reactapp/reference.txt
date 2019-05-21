@@ -201,6 +201,40 @@
 		runtime module loading in react
 		redux
 		react hooks
+
+			----- useState() hook
+
+				import { useState } from 'react'
+				const inputState = useState('');
+				const inputchangeHandler = (event) => {
+					inputState[1](event.target.value);
+				};
+				return <React.Fragment>
+					<input type="text" 
+						placeholder="todo"
+						value={inputState[0]}
+						onChange={inputchangeHandler} />
+					<button type="button">Add</button>
+				</React.Fragment>
+
+			----- Adding Array Destructuring
+
+				const [ todoName , setTodoName ] = useState('');
+
+			----- using multiple state
+
+				const [todoList , setTodoList ]	= useState([]);
+
+				const todoAddHandler = () => {
+					setTodoList(todoList.concat(todoName));
+				}		
+
+			----- using one state instead
+
+			----- rules of hooks
+
+				
+
 		context api
 		forms in react
 		
