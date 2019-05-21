@@ -47,5 +47,6 @@ const acyncComponent = (impotComponent) => {
 	}
 }
 
+----- working with forms
 
-
+	----- creating custom dynamic input component

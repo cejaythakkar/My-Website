@@ -40,6 +40,10 @@ const initialState = {
     "789": {
         label: "config",
         isConfigurable: false
+    },
+    "134": {
+        label: "Tabs",
+        isConfigurable: false
     }
 };
 

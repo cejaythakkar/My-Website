@@ -1,0 +1,35 @@
+@import '../../common.scss';
+.sidebar-wrapper{
+    display:flex;
+    flex-direction:column;
+}
+.sidebar-wrapper .sidebar-body-wrapper{
+    height:100%;
+    display:flex;
+}
+.sidebar-wrapper .sidebar-body-wrapper .navbar{
+    width:100%;
+    padding:0;
+    display:flex;
+    justify-content: center !important;
+}
+.sidebar-wrapper .sidebar-body-wrapper .navbar .navbar-list{
+    margin:0;
+    padding:0;    
+}
+.sidebar-wrapper .sidebar-header-wrapper{
+    height:4.2rem;
+}
+.sidebar-wrapper .sidebar-footer-wrapper{
+    height:4.2rem;
+}
+.navbar-list-item a{
+    font-size:$font-size-1;
+    color:$color-primary;
+    &.active{
+        color:$color-secondary;
+    }
+    &:hover{
+        text-decoration:none;
+    }
+}

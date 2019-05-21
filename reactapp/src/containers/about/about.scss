@@ -1,0 +1,43 @@
+@import '../../common.scss';
+.about-wrapper .body-navbar-wrapper .nav-tabs .nav-item .nav-link{
+        padding:.5rem 1rem;
+        font-size:$font-size-2;
+        color:$color-primary;
+        &.active{
+                color:$color-secondary;
+        }
+}
+.add-about-wrapper .form-control{
+        margin-bottom:1rem;
+        border: none;
+        border-bottom:1px solid #ced4da;
+        border-radius: 0;
+        font-size: $font-size-4;
+}
+.about-list-container .about-item-list{
+        list-style:none;
+}
+.react-datepicker__input-container,.react-datepicker-wrapper{
+        width:100%;
+}
+.date-picker-wrapper .date-picker-container:first-child{
+        padding-left:0;
+}
+.date-picker-wrapper .date-picker-container:last-child{
+        padding-right:0;
+}
+.react-datepicker__header.react-datepicker-year-header{
+        font-size:$font-size-1;
+}
+.react-datepicker__month-container{
+        width:30rem;
+}
+.react-datepicker{
+        font-size:$font-size-2;
+}
+.submit-button-container{
+        .btn{
+                font-size:$font-size-4;
+                font-weight:bold;
+        }
+}

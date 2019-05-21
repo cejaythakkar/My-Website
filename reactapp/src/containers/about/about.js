@@ -10,6 +10,7 @@ import Navbar from '../../components/body/navbar/navbar';
 import aboutdata from './aboutdata';
 import ActionType from '../../store/actions/actiontype';
 import './about.css';
+import './about.scss';
 
 class About extends React.Component{
     state = {
@@ -61,7 +62,6 @@ class About extends React.Component{
                         )
                     })}
                 </Switch>
-                
             </section>
         );
     }

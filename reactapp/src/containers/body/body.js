@@ -3,6 +3,7 @@ import { Route , Switch } from 'react-router-dom';
 import About from '../about/about';
 import Contact from '../contact/contact';
 import Config from '../config/config';
+import Tabs from '../tabs/tabs'
 export default class Body extends React.Component{
     render(){
         return (
@@ -10,7 +11,8 @@ export default class Body extends React.Component{
                 <Switch>
                     <Route path="/admin/about" component={About}/>
                     <Route path="/admin/contact" component={Contact}/>
-                    <Route path="/admin/config" component={Config}/>
+                    {/* <Route path="/admin/config" component={Config}/> */}
+                    <Route path="/admin/tabs" component={Tabs}/>
                 </Switch>
             </div>
         )

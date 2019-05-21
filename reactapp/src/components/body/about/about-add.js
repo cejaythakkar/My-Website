@@ -9,7 +9,7 @@ export default class Add extends React.Component {
     description: "",
     showFromCalendar: false,
     startDate: null,
-    toDate:null
+    toDate: null
   };
 
   onChangeHandler = event => {
@@ -42,25 +42,29 @@ export default class Add extends React.Component {
             onChange={this.onChangeHandler}
             placeholder="Enter the Subtitle..."
           />
-          <div className="date-picker-container">
-            <label for="from-date" >From:</label>
-            <DatePicker
-              name="from-date"
-              dateFormat="yyyy/MM"
-              selected={this.state.startDate}
-              onChange={this.handleChange}
-              showMonthYearPicker
-            />
-          </div>
-          <div className="date-picker-container">
-          <label for="from-date" >To:</label>
-            <DatePicker
-              name="to-date"
-              dateFormat="yyyy/MM"
-              selected={this.state.startDate}
-              onChange={this.handleChange}
-              showMonthYearPicker
-            />
+          <div className="date-picker-wrapper row py-3 m-0">
+            <div className="date-picker-container col-6 w-100">
+              <DatePicker
+                className="form-control w-100"
+                name="from-date"
+                dateFormat="yyyy/MM"
+                selected={this.state.startDate}
+                onChange={this.handleChange}
+                showMonthYearPicker
+                placeholderText="From Period"
+              />
+            </div>
+            <div className="date-picker-container col-6 w-100">
+              <DatePicker
+                className="form-control w-100"
+                name="to-date"
+                dateFormat="yyyy/MM"
+                selected={this.state.startDate}
+                onChange={this.handleChange}
+                showMonthYearPicker
+                placeholderText="To Period"
+              />
+            </div>
           </div>
           <input
             type="text"
@@ -77,9 +81,11 @@ export default class Add extends React.Component {
             onChange={this.onChangeHandler}
             placeholder="Enter the description..."
           />
-          <button type="button" className="btn" onClick={this.formSubmit}>
-            Submit
+          <div className="submit-button-container text-right py-4">
+            <button type="button" className="btn" onClick={this.formSubmit}>
+              Submit
           </button>
+          </div>
         </form>
       </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { createStore , combineReducers , applyMiddleware , compose  } from 'C:/Users/bdoshi/AppData/Local/Microsoft/TypeScript/2.9/node_modules/redux';
+import { createStore , combineReducers , applyMiddleware , compose  } from 'redux';
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import counterReducer  from './store/reducers/counter';
