@@ -10,6 +10,7 @@ export default function TabDetailsFieldValidationList(props) {
               key={key}
               id={key}
               {...props.validations[key]}
+              classes={{div:'col-4',label:'col',input:'col'}}
               changed={( event , inputType ) => props.changed(event, key, props.configField,inputType)}
             />
           );

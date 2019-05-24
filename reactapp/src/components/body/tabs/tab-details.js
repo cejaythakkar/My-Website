@@ -4,7 +4,8 @@ import tabData from "../../../containers/tabs/tabsData";
 import TabDetailsTabInfo from "./tab-details-tab-info";
 import TabDetailsFieldValidationList from "./tab-details-field-validation-list";
 import TabDetailsFieldInfo from "./tab-details-field-info";
-
+import Accordian from '../../common/accordian/accordian';
+import './tab-details.scss';
 export default class Details extends Component {
   state = {
     tab: null
@@ -82,7 +83,7 @@ export default class Details extends Component {
                   <div>
                     <h5>validations</h5>
                     <div className="validation-list-wrapper">
-                      <ul className="validation-list">
+                      <ul className="validation-list row flex-wrap">
                         <TabDetailsFieldValidationList
                           validations={configFormField.validations}
                           configField={field}
@@ -123,9 +124,11 @@ export default class Details extends Component {
                   this.onTabInfoChangeHandler(event, inputType, field);
                 }}
               />
-              <div className="tab-fields-list-wrapper">
-                <ul className="tab-fields-list">{createfieldsList()}</ul>
-              </div>
+              <Accordian header="Configuration Fields">
+                <div className="tab-fields-list-wrapper">
+                  <ul className="tab-fields-list">{createfieldsList()}</ul>
+                </div>
+              </Accordian>
             </div>
           </div>
         )}

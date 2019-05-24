@@ -31,14 +31,17 @@ const tabData = {
         fieldDescription:{ type: "text", value: "This field is to edit/configure the label of the tab." },
         validations: {
           required: {
+            label : 'Required',
             type: "checkbox",
             value: true
           },
           minLength: {
+            label : 'Min Length',
             type: "number",
             value: 3
           },
           maxLength: {
+            label : 'Max Length',
             type: "number",
             value: 15
           }
